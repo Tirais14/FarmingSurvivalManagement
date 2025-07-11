@@ -13,7 +13,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SecondaryAction",
@@ -22,13 +22,22 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchGameMode",
-                    "type": "PassThrough",
+                    "name": "SwitchBuildMode",
+                    "type": "Button",
                     "id": "e28d7046-5c64-44dd-8a1a-894846012642",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchPauseMode",
+                    "type": "Button",
+                    "id": "eaa0cad3-3e47-4fb4-abbd-812c6f145b41",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -60,11 +69,22 @@
                 {
                     "name": "",
                     "id": "a3b8f4f9-8682-4d28-a058-32fbdc344213",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "SwitchGameMode",
+                    "action": "SwitchBuildMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d142c7bd-83fb-4f62-a23b-47a5ee87791a",
+                    "path": "<Keyboard>/pause",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPauseMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -87,7 +107,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "7607c7b6-cd76-4816-beef-bd0341cfe950",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -96,7 +116,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "15cef263-9014-4fd5-94d9-4e4a6234a6ef",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

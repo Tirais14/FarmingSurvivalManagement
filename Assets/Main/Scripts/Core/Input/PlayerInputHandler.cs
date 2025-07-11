@@ -6,7 +6,7 @@ using UTIRLib;
 
 namespace Core
 {
-    public class PlayerInputHandler : MonoX, IPlayerInputHandler
+    public class PlayerInputHandler : MonoX
     {
         private InputAction pointer = null!;
 
@@ -17,11 +17,13 @@ namespace Core
 
         private InputAction primaryAction = null!;
         private InputAction secondaryAction = null!;
-        private InputAction switchGameMode = null!;
+        private InputAction switchBuildMode = null!;
+        private InputAction switchPauseMode = null!;
 
         public event Action<bool> OnPrimaryAction = null!;
         public event Action<bool> OnSecondaryAction = null!;
-        public event Action<bool> OnSwitchGameMode = null!;
+        public event Action<bool> OnSwitchBuildMode = null!;
+        public event Action<bool> OnSwitchPauseMode = null!;
 
         protected override void OnAwake()
         {
@@ -40,7 +42,8 @@ namespace Core
 
             primaryAction = playerActions.FindAction("PrimaryAction");
             secondaryAction = playerActions.FindAction("SecondaryAction");
-            switchGameMode = playerActions.FindAction("SwitchGameMode");
+            switchBuildMode = playerActions.FindAction("SwitchBuildMode");
+            switchPauseMode = playerActions.FindAction("SwitchPauseMode");
         }
 
         private void RegisterInputs()
@@ -55,9 +58,14 @@ namespace Core
                 OnSecondaryAction?.Invoke(context.ReadValueAsButton());
             };
 
-            switchGameMode.performed += (context) =>
+            switchBuildMode.performed += (context) =>
             {
-                OnSwitchGameMode?.Invoke(context.ReadValueAsButton());
+                OnSwitchBuildMode?.Invoke(context.ReadValueAsButton());
+            };
+
+            switchPauseMode.performed += (context) =>
+            {
+                OnSwitchPauseMode?.Invoke(context.ReadValueAsButton());
             };
         }
     }

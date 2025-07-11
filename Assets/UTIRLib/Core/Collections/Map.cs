@@ -64,7 +64,7 @@ namespace UTIRLib.Collections
         public Map(Vector2Int size, int minX = 0, int minY = 0) : this(size.x, size.y, minX, minY)
         {
         }
-        public Map(Vector3Int size, int minX = 0, int minY = 0) : this(size.ToVector2Int(), minX, minY)
+        public Map(Vector3Int size, int minX = 0, int minY = 0) : this(size.ToVector2(), minX, minY)
         {
         }
         public Map(BoundsInt bounds) : this(bounds.size, bounds.xMin, bounds.yMin)
@@ -100,7 +100,7 @@ namespace UTIRLib.Collections
             return false;
         }
         public bool TryGetValue(Vector3Int position, [NotNullWhen(true)] out T value) =>
-            TryGetValue(position.ToVector2Int(), out value);
+            TryGetValue(position.ToVector2(), out value);
 
         public void SetValue(int x, int y, T value) => SetValueInternal(x, y, value);
         public void SetValue(Vector2Int position, T value) => SetValueInternal(position.x, position.y, value);
@@ -129,7 +129,7 @@ namespace UTIRLib.Collections
             }
         }
         public void Fill(Vector3Int[] positions, T[] values) =>
-            Fill(positions.Select((pos) => pos.ToVector2Int()).ToArray(), values);
+            Fill(positions.Select((pos) => pos.ToVector2()).ToArray(), values);
         public void Fill(T value)
         {
             for (int y = minY; y < maxY; y++)

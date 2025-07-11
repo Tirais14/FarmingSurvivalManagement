@@ -80,12 +80,12 @@ namespace UTIRLib.TwoD
 
         public static Vector2 ToVector2(this Direction2D direction)
         {
-            return ToVector3Int(direction).ToVector2Int();
+            return ToVector3Int(direction).ToVector2();
         }
 
         public static Vector2Int ToVector2Int(this Direction2D direction)
         {
-            return ToVector3Int(direction).ToVector2Int();
+            return ToVector3Int(direction).ToVector2();
         }
 
         public static bool IsDiagonal(this Direction2D direction) =>

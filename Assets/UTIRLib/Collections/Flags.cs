@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UTIRLib.Extensions;
 
 #nullable enable
 
@@ -65,6 +64,16 @@ namespace UTIRLib.Collections
         }
 
         public void Add(T item) => values.Add(item);
+
+        public bool TryAdd(T item)
+        {
+            if (values.TryGetValue(item, out _))
+                return false;
+
+            values.Add(item);
+
+            return true;
+        }
 
         public void Clear() => values.Clear();
 

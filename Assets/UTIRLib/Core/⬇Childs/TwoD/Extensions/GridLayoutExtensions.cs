@@ -11,13 +11,13 @@ namespace UTIRLib.TwoD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector2Int WorldToCell(this GridLayout gridLayout, Vector3 position)
         {
-            return gridLayout.WorldToCell(position).ToVector2Int();
+            return gridLayout.WorldToCell(position).ToVector2();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector3 CellToWorld(this GridLayout gridLayout, Vector2Int position)
         {
-            return gridLayout.CellToWorld(position.ToVector3Int());
+            return gridLayout.CellToWorld(position.ToVector3());
         }
     }
 }
