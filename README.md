@@ -1,6 +1,1 @@
--Implemented ZenJect
--Implemented UniRX3
--Implemented MVVM Pattern
--Implemented State Pattern
--Implemented Player Controller
--Implemented basic pathfinding algorithm (A*) 
+
