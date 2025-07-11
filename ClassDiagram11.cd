@@ -1,0 +1,996 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UTIRLib.Attributes.Metadata.MetadataAttributeNotFoundException" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\Exceptions\MetadataAttributeNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.EnumExtensions" Collapsed="true">
+    <Position X="33.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAEEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\Extensions\EnumExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.MemberInfoExtensions" Collapsed="true">
+    <Position X="30" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\Extensions\MemberInfoExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.MetadataAttributeExtensions" Collapsed="true">
+    <Position X="35.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\Extensions\MetadataAttributeExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.MetadataAttribute" Collapsed="true">
+    <Position X="3" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\MetadataAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.MetaStringAttribute" Collapsed="true">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\MetaStringAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.MetaStringsAttribute" Collapsed="true">
+    <Position X="3" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\MetaStringsAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.Metadata.MetaTypeAttribute" Collapsed="true">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\Metadata\MetaTypeAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.OptionalAttribute" Collapsed="true">
+    <Position X="33.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\OptionalAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.RequiredMemberAttribute" Collapsed="true">
+    <Position X="37" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\RequiredMemberAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Attributes.SerializeRestrictionAttribute" Collapsed="true">
+    <Position X="26.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Attributes\SerializeRestrictionAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Collections.Flags&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAIABAUyAEABAQAAAAAAKAEAAAAAABQIiA=</HashCode>
+      <FileName>Assets\UTIRLib\Collections\Flags.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTIRLib.Collections.ArrayFactory" Collapsed="true">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Collections\Utils\ArrayFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Collections.ArrFactory" Collapsed="true">
+    <Position X="33.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Collections\Utils\ArrFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.ArrayHelper" Collapsed="true">
+    <Position X="30" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\UTIRLib\Collections\Utils\ArrayHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.EnumNotFlagsException" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\EnumNotFlagsException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.TypeNotFoundException" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\TypeNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.AssetTypeNameExtensions" Collapsed="true">
+    <Position X="35.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\AssetType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.BindingFlagsDefaultExtensions" Collapsed="true">
+    <Position X="37" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\BindingFlagsDefault.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FloatExtensions" Collapsed="true">
+    <Position X="30" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\System\FloatExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.ArrayExtensions" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCCAAAAAAAAAAAAgIAAAAAAQEICAAAAAAAhCAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\Collections\ArrayExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.CollectionExtensions" Collapsed="true">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABIAEIAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\Collections\CollectionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.DictionaryExtensions" Collapsed="true">
+    <Position X="38.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\Collections\DictionaryExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.EnumerableExtensions" Collapsed="true">
+    <Position X="28.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAAQAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\Collections\EnumerableExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.ListExtensions" Collapsed="true">
+    <Position X="28.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\Collections\ListExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.ObjectExtensions" Collapsed="true">
+    <Position X="38.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\ObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.StringExtensions" Collapsed="true">
+    <Position X="31.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBCAAAAAAAAAgAAAAIAQAAiAAkAQAAAAAAABAAAAGA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\StringExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.StructExtensions" Collapsed="true">
+    <Position X="35.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\StructExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.TypeExtensions" Collapsed="true">
+    <Position X="26.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIQAAAAAAAAAAAAhAAAAAAgAABAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\TypeExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.ColorExtensions" Collapsed="true">
+    <Position X="30" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAACAAAAAQIAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Unity\ColorExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.ComponentExtensions" Collapsed="true">
+    <Position X="31.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Unity\ComponentExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.GameObjectExtensions" Collapsed="true">
+    <Position X="35.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAIABAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Unity\GameObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.TransformExtensions" Collapsed="true">
+    <Position X="38.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAIABAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Unity\TransformExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.GameObjectDestroyLocker" Collapsed="true">
+    <Position X="31.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\UTIRLib\GameObjectDestroyLocker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.MonoX" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAQCAIAUAEEAIAABgAAAACAAAAAAQAIAAAAUA=</HashCode>
+      <FileName>Assets\UTIRLib\MonoX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.MonoXStatic" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAABEAAAAQAEAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\MonoXStatic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.MonoXStatic&lt;TThis&gt;" Collapsed="true">
+    <Position X="0.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\MonoXStatic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystemPathExtensions" Collapsed="true">
+    <Position X="26.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\FSPath\Extensions\FileSystemPathExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.MemberInfoHelper" Collapsed="true">
+    <Position X="31.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAQAAAAAAIAAIAAAACAAAAAAAEAAAQAAAAAAAI=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\MemberInfoHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.ComponentNotFoundException" Collapsed="true">
+    <Position X="19.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\ComponentNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.MemberNotFoundException" Collapsed="true">
+    <Position X="21.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\MemberNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.ObjectNotFoundException" Collapsed="true">
+    <Position X="24" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\ObjectNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.StringArgumentException" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\StringArgumentException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.TirLibException" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAI=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\TirLibException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.WrongCollectionArgumentException" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\WrongCollectionArgumentException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.WrongCollectionException" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\WrongCollectionException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.WrongCollectionItemException" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\WrongCollectionItemException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.WrongStringException" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Exceptions\WrongStringException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.ObjectExtensions" Collapsed="true">
+    <Position X="30" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Extensions\ObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.ClassQueries" Collapsed="true">
+    <Position X="38.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQAAAAAEAAAAAACAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Linq\ClassQueries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.ObjectQueries" Collapsed="true">
+    <Position X="31.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Linq\ObjectQueries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Diagnostics.TirLibDebug" Collapsed="true">
+    <Position X="37" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAAAAgBYABAAAABBAAAAgAAGAAAADAABAAIwA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\TirLibDebug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.EnumFlags.EnumFlagsExtensions" Collapsed="true">
+    <Position X="35.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABIAQAAAABQAEAAAEAAAgAAAAAAAAAAAAYEBgQAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\System\EnumFlagsExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Extensions.ObjectExtensions" Collapsed="true">
+    <Position X="26.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\System\ObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Extensions.StringExtensions" Collapsed="true">
+    <Position X="30" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAIBAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\System\StringExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Extensions.EnumExtensions" Collapsed="true">
+    <Position X="31.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAEQAAAAAAAAAAAAAAAAAIAAAACgAAAQYBAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\EnumExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Extensions.MethodInfoExtensions" Collapsed="true">
+    <Position X="37" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\System\MethodInfoExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.UExtensions.ComponentExtensions" Collapsed="true">
+    <Position X="33.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAEAAAAAgARAAgAAAAAAAAAAAQAAIAEAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\Unity\ComponentExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.UExtensions.GameObjectExtensions" Collapsed="true">
+    <Position X="33.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAEAAAAAgARAAgAAAAAAAAAAAQAAIAEAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\Unity\GameObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.UExtensions.VectorExtensions" Collapsed="true">
+    <Position X="33.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQIAAAAAACAAAEAAQAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Extensions\Namespaced\Unity\VectorExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentAttribute" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Attributes\GetComponentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentInChildrenAttribute" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Attributes\GetComponentInChildrenAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentInParentAttribute" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Attributes\GetComponentInParentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentIfNullAttribute" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Attributes\If\GetComponentIfNullAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentInChildrenIfNullAttribute" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Attributes\If\GetComponentInChildrenIfNullAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentInParentIfNullAttribute" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Attributes\If\GetComponentInParentIfNullAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.ComponentInjector" Collapsed="true">
+    <Position X="37" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAACAAAAAAAACAAAAAAAAgAAAAQBCAEAAAEA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\ComponentInjector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Injector.GetComponentSettingsExtensions" Collapsed="true">
+    <Position X="38.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAAAAAAAgQAAAAAQIgAAIAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Enums\GetComponentSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Linq.ArrayQueries" Collapsed="true">
+    <Position X="31.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Linq\ArrayQueries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Linq.EnumerableQueries" Collapsed="true">
+    <Position X="30" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Linq\EnumerableQueries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Linq.ObjectExtensions" Collapsed="true">
+    <Position X="28.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\UTIRLib\Linq\ObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Linq.StringQueries" Collapsed="true">
+    <Position X="33.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAFAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Linq\StringQueries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Patterns.Composite.Composite&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAwAGABAAAAAAAAIAEAAAAAIAEAiA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Composite\Composite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UTIRLib.Patterns.Composite.ReadOnlyComposite&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAABAACAKAAAQAAAAAAAAEAAAAAAIQAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Composite\ReadOnlyComposite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UTIRLib.Patterns.State.State" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAEAAAAAAAAAAIAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\State.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UTIRLib.Patterns.State.StateHelper" Collapsed="true">
+    <Position X="28.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\Utils\StateHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Patterns.StateMachine.ReadOnlyState" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAAEAAAAAhQQAAAQAAAEAAAAMABAAKAAAAgAAAAo=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\ReadOnlyState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UTIRLib.Utils.Helper" Collapsed="true">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.MemberValidator" Collapsed="true">
+    <Position X="33.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\MemberValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.EnumCache&lt;T&gt;" Collapsed="true">
+    <Position X="26.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\EnumCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.EnumHelper" Collapsed="true">
+    <Position X="37" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAIAAAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\EnumHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.FileHelper" Collapsed="true">
+    <Position X="38.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\FileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.TypeHelper" Collapsed="true">
+    <Position X="28.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIBAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\TypeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.TypeSearch" Collapsed="true">
+    <Position X="30" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAEAAABAAAAACAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\TypeSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.UnityObjectHelper" Collapsed="true">
+    <Position X="31.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAABAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\System\UnityObjectHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.Collider2DHelper" Collapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\UnityEngine\Collider2DHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.ComponentHelper" Collapsed="true">
+    <Position X="35.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\UnityEngine\ComponentHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.GameObjectHelper" Collapsed="true">
+    <Position X="37" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAICQAEAAAAAgARAAgAAAAAAAAAAAQAAIAEAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\UnityEngine\GameObjectHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.PolygonGenerator" Collapsed="true">
+    <Position X="35.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\UnityEngine\PolygonGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.ResourcesHelper" Collapsed="true">
+    <Position X="38.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\UnityEngine\ResourcesHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.Utils.VectorHelper" Collapsed="true">
+    <Position X="35.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Utils\UnityEngine\VectorHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="UTIRLib.Collections.Arr&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEBAAAAAAEgAABEcyAoAAARAIAAICJAECAQgAAFQIBA=</HashCode>
+      <FileName>Assets\UTIRLib\Collections\Structs\Arr.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.Collections.DefaultEnumerator&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAACAAAAAAAAAAAAAoAAAAAQAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Collections\Structs\DefaultEnumerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.BitMask" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAACAAAAAEAAAAAAAAEAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\BitMask.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.CyclePredicate" Collapsed="true">
+    <Position X="31.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIACAAAgAAAAAAAABAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\CyclePredicate.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.EmptyEnumerator&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAACAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\EmptyEnumerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.FSPath" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="37" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIIRRAAAABAAF8AkAAAYABAAEAaCQQABBAABAQiA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\FSPath\FSPath.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.InvokeResult" Collapsed="true">
+    <Position X="38.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAgAAABQEAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\InvokeResult.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.InvokeResult&lt;T&gt;" Collapsed="true">
+    <Position X="26.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAQAAAAAABQCAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\InvokeResult.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.ResolvedMemberInvokable" Collapsed="true">
+    <Position X="30" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAEAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\ResolvedMemberInvokable.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.ValuePair" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\ValuePair.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.ValuePair&lt;TFirst, TSecond&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="37" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAQAAQAAAAAAAAIAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Structs\ValuePair.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="UTIRLib.Diagnostics.ArgumentInfo" Collapsed="true">
+    <Position X="26.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Structs\ArgumentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.Diagnostics.NullValidator&lt;T&gt;" Collapsed="true">
+    <Position X="28.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAQAABAAAACAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Structs\NullValidator.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.Diagnostics.ValidationInfo" Collapsed="true">
+    <Position X="33.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAEAAAAAAAAQEAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Structs\ValidationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UTIRLib.Patterns.StateMachine.StateParameters" Collapsed="true">
+    <Position X="31.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAACAIAAQAAAAAgABAAAAEAAoAAAAg=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\Structs\StateParameters.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="UTIRLib.IConverter" Collapsed="true">
+    <Position X="3.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IConverter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IConverter&lt;TOut&gt;" Collapsed="true">
+    <Position X="3.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IConverter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IConverter&lt;T, TOut&gt;" Collapsed="true">
+    <Position X="3.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IConverter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IExecutable" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IExecutable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IExecutable&lt;T&gt;" Collapsed="true">
+    <Position X="10.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IExecutable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IExecutableBase" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IExecutableBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IStateNotifier" Collapsed="true">
+    <Position X="26.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IStateNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IStateNotifier&lt;T&gt;" Collapsed="true">
+    <Position X="28.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IStateNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.ISwitchable" Collapsed="true">
+    <Position X="30" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\ISwitchable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IToggleable" Collapsed="true">
+    <Position X="31.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IToggleable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IValuePair" Collapsed="true">
+    <Position X="12.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IValuePair.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.IValuePair&lt;TFirst, TSecond&gt;" Collapsed="true">
+    <Position X="12.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Interfaces\IValuePair.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Command.ICommand" Collapsed="true">
+    <Position X="26.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Command\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Command.ICommandReciever" Collapsed="true">
+    <Position X="28.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Command\ICommandReciever.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Command.ICommandReciever&lt;T&gt;" Collapsed="true">
+    <Position X="30" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Command\ICommandReciever.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Composite.IComposite" Collapsed="true">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAIAEAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Composite\Interfaces\IComposite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Composite.IComposite&lt;T&gt;" Collapsed="true">
+    <Position X="9.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAIAEAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Composite\Interfaces\IComposite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Composite.IReadOnlyComposite" Collapsed="true">
+    <Position X="9.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Composite\Interfaces\IReadOnlyComposite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Composite.IReadOnlyComposite&lt;T&gt;" Collapsed="true">
+    <Position X="10.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\Composite\Interfaces\IReadOnlyComposite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Factory.IFactory" Collapsed="true">
+    <Position X="31.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Factory.IFactory&lt;T&gt;" Collapsed="true">
+    <Position X="33.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Factory.IFactory&lt;T1, TOut&gt;" Collapsed="true">
+    <Position X="35.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Factory.IFactory&lt;T1, T2, TOut&gt;" Collapsed="true">
+    <Position X="37" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.Factory.IFactory&lt;T1, T2, T3, TOut&gt;" Collapsed="true">
+    <Position X="38.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.State.IReadOnlyState" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAAAAAAAAAAAAAAQAAAEAAAAEABAAKAAAAAAAAAI=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\Interfaces\IReadOnlyState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTIRLib.Patterns.State.IState" Collapsed="true">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAEAAAAAAAAAAIAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\Interfaces\IState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="UTIRLib.ArgumentsResolveRule" Collapsed="true">
+    <Position X="26.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQEAA=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\ArgumentsResolveRule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.AssetType" Collapsed="true">
+    <Position X="28.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\AssetType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.BindingFlagsDefault" Collapsed="true">
+    <Position X="30" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAAAQAgAACAAQAAAAAAAgAAAAAAAAAAAIAAAAAAAAQ=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\BindingFlagsDefault.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.StringJoinOptions" Collapsed="true">
+    <Position X="35.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\StringJoinOptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.TypeNameAttributes" Collapsed="true">
+    <Position X="37" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAIAAAAAAAAIAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Enums\TypeNameAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.UpdateMethod" Collapsed="true">
+    <Position X="38.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAFAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Patterns\State\Enums\UpdateMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.Diagnostics.MemberType" Collapsed="true">
+    <Position X="33.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAgCA=</HashCode>
+      <FileName>Assets\UTIRLib\Diagnostics\Enums\MemberType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UTIRLib.Injector.GetComponentSettings" Collapsed="true">
+    <Position X="31.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAkIAgAAABAAJACAAAAgAAAAAAAAAAEAEAA=</HashCode>
+      <FileName>Assets\UTIRLib\Injector\Enums\GetComponentSettings.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

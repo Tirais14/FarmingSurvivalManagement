@@ -1,0 +1,21 @@
+{
+    "name": "Game.AI",
+    "rootNamespace": "Game.AI",
+    "references": [
+        "GUID:a40ae8fc5b5aa8144909b42e94e4e766",
+        "GUID:c1da8a40aff4cc34796b61811e842ddd",
+        "GUID:cec408dde85aac047a78e88de30b4173",
+        "GUID:eda4aa9523136c749891583ccd056539",
+        "GUID:d2872dbf20cb9874e9a6ada3585f81fe",
+        "GUID:5efe819646cfc484c834f474f1873137"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

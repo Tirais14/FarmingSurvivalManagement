@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  m_GroupName: Items
+  m_GUID: 628fc09a819e45040b639f6ba8044451
+  m_SerializeEntries:
+  - m_GUID: 0c8cb03229f624544875b743933d5f1d
+    m_Address: Assets/Main/Prefabs/Items/Placeables
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cea5dc58e88bc048ad7b9916f6d11d9
+    m_Address: Assets/Main/Prefabs/Items/Basic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8a80d1d4d6524ae469cb80c90e3492dd, type: 2}
+    - {fileID: 11400000, guid: 6c719ca3d7bd0574b9115155d45de823, type: 2}

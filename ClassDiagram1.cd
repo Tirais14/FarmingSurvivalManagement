@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UTIRLib.FileSystem.DirectoryEntry" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAFAAgQAIiBAAAAAQAAAAAAAARAAEAAAQAEAGAA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\DirectoryEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.FilenameException" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\Exceptions\FilenameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.FileOverwriteNotAllowedException" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\Exceptions\FileOverwriteNotAllowedException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.PathNotValidException" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\Exceptions\PathNotValidException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.FileSystemInfoExtensions" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\Extensions\FileSystemInfoExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.StringExtensions" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\Extensions\StringExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.FileEntry" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAIIIKICAIgAAAAAAARIgAIXAEAAgAAYEQBGA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\FileEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTIRLib.FileSystem.FileSystemEntry" Collapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIBBIggAACoEEEACAASQAAEAMUAAAAAAwAEAEAA=</HashCode>
+      <FileName>Assets\UTIRLib\Core\FileSystem\FileSystemEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

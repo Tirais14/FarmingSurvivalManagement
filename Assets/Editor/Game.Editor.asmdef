@@ -1,0 +1,36 @@
+{
+    "name": "Game.Editor",
+    "rootNamespace": "Game.Editor",
+    "references": [
+        "GUID:4a6b91aa52b1b004eba4688d8884e5dd",
+        "GUID:a40ae8fc5b5aa8144909b42e94e4e766",
+        "GUID:3aab3597ed57b8a408f2c1e40706a3bf",
+        "GUID:d2872dbf20cb9874e9a6ada3585f81fe",
+        "GUID:c228f3ca8f6bb594b968cbb82beea483",
+        "GUID:e0c3f2a2e689cff439e4b87ae691eabe",
+        "GUID:86090fba37b91534998945c10134b783",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:69448af7b92c7f342b298e06a37122aa",
+        "GUID:a2603e07688ebb14d8f56a8bda21fa91",
+        "GUID:cf687dbe8c05f01469456975cd1c0bbf",
+        "GUID:e7ffd46f25022774bb3f18c20a05ea1f",
+        "GUID:cec408dde85aac047a78e88de30b4173"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.addressables",
+            "expression": "2.4.6",
+            "define": "USE_ADDRESSABLES"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,110 @@
+using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UTIRLib;
+using UTIRLib.Diagnostics;
+
+[CreateAssetMenu(fileName = "InputActionInfo", menuName = "Scriptable Objects/Input Action Info Asset")]
+public class InputActionInfoAsset : ScriptableObject
+{
+    public enum InputValueType
+    {
+        None,
+        Button,
+        Vector2,
+        Vector3,
+        Quaternion
+    }
+    private bool initialized;
+    private Type inputValueSystemType;
+    [SerializeField] private InputActionAsset inputActionsAsset;
+    [SerializeField] private string actionMapName;
+    [Header("Name in Input System")]
+    [SerializeField] private string actionName;
+    [SerializeField] private InputValueType inputValueType;
+
+    public bool Initialized => initialized;
+    public Type InputValueSystemType => inputValueSystemType;
+    public InputActionAsset InputActionsAsset => inputActionsAsset;
+    public string ActionMapName => actionMapName;
+    public InputAction InputActionProp => GetInputAction();
+    public string ActionName => actionName;
+
+    /// <exception cref="ArgumentNullException"></exception>
+    /// <exception cref="ArgumentException"></exception>
+    public void Initialize(InputActionAsset inputActionsAsset,
+        string actionMapName,
+        InputAction inputAction)
+    {
+        if (initialized) {
+            Debug.LogWarning($"{nameof(InputActionInfoAsset).SeparateWordsByCase()} is already initialized!");
+            return;
+        }
+
+        if (inputActionsAsset == null) {
+            throw new ArgumentNullException(nameof(inputActionsAsset));
+        }
+        if (string.IsNullOrEmpty(actionMapName)) {
+            throw new ArgumentException($"\"{nameof(actionMapName)}\" не может быть неопределенным или пустым.", nameof(actionMapName));
+        }
+
+        this.inputActionsAsset = inputActionsAsset;
+        this.actionMapName = actionMapName;
+        actionName = inputAction.name;
+        inputValueType = IdentifyActionValueType(inputAction);
+        SetInputValueSystemType();
+
+        initialized = true;
+    }
+
+    /// <summary>
+    /// <br/>Logs:
+    /// <br/><see cref="ArgumentError"/>
+    /// </summary>
+    /// <returns><see langword="null"/> if operation failed</returns>
+    public InputAction GetInputAction()
+    {
+        InputAction foundInputAction = inputActionsAsset.FindActionMap(actionMapName, true)?.
+            FindAction(actionName);
+
+        if (foundInputAction == null) {
+            new ArgumentError(actionMapName, nameof(actionMapName), "Input action doesn't registred.");
+        }
+
+        return foundInputAction;
+    }
+
+    public InputValueType IdentifyActionValueType(InputAction inputAction)
+    {
+        if (inputAction.expectedControlType == "Button") {
+            return InputValueType.Button;
+        }
+        if (inputAction.expectedControlType.Contains(
+            nameof(Vector2), StringComparison.CurrentCultureIgnoreCase)) {
+            return InputValueType.Vector2;
+        }
+        if (inputAction.expectedControlType.Contains(
+            nameof(Vector3), StringComparison.CurrentCultureIgnoreCase)) {
+            return InputValueType.Vector2;
+        }
+        if (inputAction.expectedControlType.Contains(
+            nameof(Quaternion), StringComparison.CurrentCultureIgnoreCase)) {
+            return InputValueType.Vector2;
+        }
+        else {
+            return InputValueType.None;
+        }
+    }
+
+    private void SetInputValueSystemType()
+    {
+        inputValueSystemType = inputValueType switch {
+            InputValueType.None => null,
+            InputValueType.Button => typeof(bool),
+            InputValueType.Vector2 => typeof(Vector2),
+            InputValueType.Vector3 => typeof(Vector3),
+            InputValueType.Quaternion => typeof(Quaternion),
+            _ => null,
+        };
+    }
+}

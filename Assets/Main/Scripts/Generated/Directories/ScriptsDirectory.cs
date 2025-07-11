@@ -1,0 +1,76 @@
+namespace Game.Generated
+{
+    public static class ScriptsDirectory
+    {
+        public const string Path = "Assets/Main/Scripts";
+        public const string Categories = "Assets/Main/Scripts/Categories";
+        public const string Constants = "Assets/Main/Scripts/Constants";
+        public const string Core = "Assets/Main/Scripts/Core";
+        public const string Data = "Assets/Main/Scripts/Data";
+        public const string General = "Assets/Main/Scripts/General";
+        public const string Interfaces = "Assets/Main/Scripts/Interfaces";
+        public const string ScriptableObjects = "Assets/Main/Scripts/Scriptable Objects";
+        public const string Zenject = "Assets/Main/Scripts/Zenject";
+        public const string Categories_AI = "Assets/Main/Scripts/Categories/AI";
+        public const string Categories_BuildingMode = "Assets/Main/Scripts/Categories/BuildingMode";
+        public const string Categories_Character = "Assets/Main/Scripts/Categories/Character";
+        public const string Categories_Database = "Assets/Main/Scripts/Categories/Database";
+        public const string Categories_Factories = "Assets/Main/Scripts/Categories/Factories";
+        public const string Categories_Farming = "Assets/Main/Scripts/Categories/Farming";
+        public const string Categories_InputHandler = "Assets/Main/Scripts/Categories/InputHandler";
+        public const string Categories_Inventory = "Assets/Main/Scripts/Categories/Inventory";
+        public const string Categories_JsonConverters = "Assets/Main/Scripts/Categories/JsonConverters";
+        public const string Categories_LocationSystem = "Assets/Main/Scripts/Categories/LocationSystem";
+        public const string Categories_PlayerSystem = "Assets/Main/Scripts/Categories/PlayerSystem";
+        public const string Categories_Ticker = "Assets/Main/Scripts/Categories/Ticker";
+        public const string Categories_UI = "Assets/Main/Scripts/Categories/UI";
+        public const string Constants_Generated = "Assets/Main/Scripts/Constants/Generated";
+        public const string Constants_Names = "Assets/Main/Scripts/Constants/Names";
+        public const string Constants_Paths = "Assets/Main/Scripts/Constants/Paths";
+        public const string Core_GameStateMachine = "Assets/Main/Scripts/Core/GameStateMachine";
+        public const string Data_Enums = "Assets/Main/Scripts/Data/Enums";
+        public const string Zenject_General = "Assets/Main/Scripts/Zenject/General";
+        public const string Zenject_Installers = "Assets/Main/Scripts/Zenject/Installers";
+        public const string Zenject_Interfaces = "Assets/Main/Scripts/Zenject/Interfaces";
+        public const string Categories_AI_Interfaces = "Assets/Main/Scripts/Categories/AI/Interfaces";
+        public const string Categories_BuildingMode_Enums = "Assets/Main/Scripts/Categories/BuildingMode/Enums";
+        public const string Categories_BuildingMode_Interfaces = "Assets/Main/Scripts/Categories/BuildingMode/Interfaces";
+        public const string Categories_BuildingMode_ScriptableObjects = "Assets/Main/Scripts/Categories/BuildingMode/ScriptableObjects";
+        public const string Categories_Character_Character = "Assets/Main/Scripts/Categories/Character/Character";
+        public const string Categories_Character_Player = "Assets/Main/Scripts/Categories/Character/Player";
+        public const string Categories_Database_Asset = "Assets/Main/Scripts/Categories/Database/Asset";
+        public const string Categories_Database_Common = "Assets/Main/Scripts/Categories/Database/Common";
+        public const string Categories_Factories_Extensions = "Assets/Main/Scripts/Categories/Factories/Extensions";
+        public const string Categories_Farming_Interfaces = "Assets/Main/Scripts/Categories/Farming/Interfaces";
+        public const string Categories_Farming_Records = "Assets/Main/Scripts/Categories/Farming/Records";
+        public const string Categories_InputHandler_Extensions = "Assets/Main/Scripts/Categories/InputHandler/Extensions";
+        public const string Categories_InputHandler_Interfaces = "Assets/Main/Scripts/Categories/InputHandler/Interfaces";
+        public const string Categories_Inventory_Factories = "Assets/Main/Scripts/Categories/Inventory/Factories";
+        public const string Categories_Inventory_Interfaces = "Assets/Main/Scripts/Categories/Inventory/Interfaces";
+        public const string Categories_Inventory_Store = "Assets/Main/Scripts/Categories/Inventory/Store";
+        public const string Categories_LocationSystem_Enums = "Assets/Main/Scripts/Categories/LocationSystem/Enums";
+        public const string Categories_LocationSystem_Extensions = "Assets/Main/Scripts/Categories/LocationSystem/Extensions";
+        public const string Categories_LocationSystem_Factories = "Assets/Main/Scripts/Categories/LocationSystem/Factories";
+        public const string Categories_LocationSystem_Interfaces = "Assets/Main/Scripts/Categories/LocationSystem/Interfaces";
+        public const string Categories_LocationSystem_ScriptableObejcts = "Assets/Main/Scripts/Categories/LocationSystem/ScriptableObejcts";
+        public const string Categories_UI_ContextMenu = "Assets/Main/Scripts/Categories/UI/ContextMenu";
+        public const string Constants_Generated_AssetNames = "Assets/Main/Scripts/Constants/Generated/AssetNames";
+        public const string Constants_Generated_Directories = "Assets/Main/Scripts/Constants/Generated/Directories";
+        public const string Constants_Paths_Generated = "Assets/Main/Scripts/Constants/Paths/Generated";
+        public const string Data_Enums_Animator = "Assets/Main/Scripts/Data/Enums/Animator";
+        public const string Data_Enums_Generated = "Assets/Main/Scripts/Data/Enums/Generated";
+        public const string Data_Enums_Input = "Assets/Main/Scripts/Data/Enums/Input";
+        public const string Data_Enums_ServiceNames = "Assets/Main/Scripts/Data/Enums/ServiceNames";
+        public const string Zenject_Installers_MonoInstallers = "Assets/Main/Scripts/Zenject/Installers/MonoInstallers";
+        public const string Categories_Character_Character_Interfaces = "Assets/Main/Scripts/Categories/Character/Character/Interfaces";
+        public const string Categories_Character_Character_States = "Assets/Main/Scripts/Categories/Character/Character/States";
+        public const string Categories_Character_Player_States = "Assets/Main/Scripts/Categories/Character/Player/States";
+        public const string Categories_Database_Asset_Const = "Assets/Main/Scripts/Categories/Database/Asset/Const";
+        public const string Categories_Database_Asset_Structs = "Assets/Main/Scripts/Categories/Database/Asset/Structs";
+        public const string Categories_Inventory_Store_Itemstack = "Assets/Main/Scripts/Categories/Inventory/Store/Itemstack";
+        public const string Categories_LocationSystem_Interfaces_Cell = "Assets/Main/Scripts/Categories/LocationSystem/Interfaces/Cell";
+        public const string Categories_LocationSystem_Interfaces_Layer = "Assets/Main/Scripts/Categories/LocationSystem/Interfaces/Layer";
+        public const string Data_Enums_Generated_AssetNames = "Assets/Main/Scripts/Data/Enums/Generated/AssetNames";
+        public const string Data_Enums_Generated_Input = "Assets/Main/Scripts/Data/Enums/Generated/Input";
+    }
+}

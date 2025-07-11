@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Scenes
+  m_EditorClassIdentifier: 
+  m_GroupName: Scenes
+  m_GUID: e26183dd2f784d64fa859d3f542aedbc
+  m_SerializeEntries:
+  - m_GUID: 4dff9f588b11be140a890eab854fee7d
+    m_Address: Assets/Main/Scenes/Shared/Bootstrapping.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66a2dcd2952c1c8458a2575fe9ea10b8
+    m_Address: Assets/Main/Scenes/Shared/TestMain.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8f982949d8f9b17409bcbb9871a24a0a, type: 2}
+    - {fileID: 11400000, guid: 9f3413c45c7ac51479daca3775cf8ec5, type: 2}

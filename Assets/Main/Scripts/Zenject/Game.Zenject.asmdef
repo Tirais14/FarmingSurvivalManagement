@@ -1,0 +1,26 @@
+{
+    "name": "Game.Zenject",
+    "rootNamespace": "Game.Zenject",
+    "references": [
+        "GUID:80d5030214fc3714db6c22cfcd99f77d",
+        "GUID:a40ae8fc5b5aa8144909b42e94e4e766",
+        "GUID:d77027b28c056154d964ae249363ab28",
+        "GUID:c1da8a40aff4cc34796b61811e842ddd",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:cec408dde85aac047a78e88de30b4173",
+        "GUID:76bf9a9e4c1c607428e0089caaac720a",
+        "GUID:23da49f85ff35bb46b6b21af26f2445d",
+        "GUID:86090fba37b91534998945c10134b783",
+        "GUID:287d9ccf8b2415446a7de22c431dc5c9",
+        "GUID:d2872dbf20cb9874e9a6ada3585f81fe"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
