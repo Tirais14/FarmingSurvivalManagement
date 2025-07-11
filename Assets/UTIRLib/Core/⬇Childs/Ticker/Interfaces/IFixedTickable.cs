@@ -1,12 +1,8 @@
-namespace UTIRLib.TickerX
+#nullable enable
+namespace UTIRLib.AlternativeTicker
 {
     public interface IFixedTickable : ITickableBase
     {
-        public void OnFixedTick();
-    }
-
-    public interface IFixedTickable<in T> : ITickableBase
-    {
-        public void OnFixedTick(T parameter);
+        void FixedTick();
     }
 }

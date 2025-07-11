@@ -5,12 +5,12 @@ using UTIRLib.Diagnostics;
 #nullable enable
 namespace UTIRLib.AlternativeTicker
 {
-    public class Ticker : MonoX, ITicker
+    public class LateTicker : MonoX, ILateTicker
     {
-        private readonly List<ITickable> tickables = new();
+        private readonly List<ILateTickable> tickables = new();
 
         /// <exception cref="ArgumentNullException"></exception>
-        public void Register(ITickable tickable)
+        public void Register(ILateTickable tickable)
         {
             if (tickable.IsNull())
                 throw new ArgumentNullException(nameof(tickable));
@@ -19,7 +19,7 @@ namespace UTIRLib.AlternativeTicker
         }
 
         /// <exception cref="ArgumentNullException"></exception>
-        public void Unregister(ITickable tickable)
+        public void Unregister(ILateTickable tickable)
         {
             if (tickable.IsNull())
                 throw new ArgumentNullException(nameof(tickable));
@@ -31,11 +31,11 @@ namespace UTIRLib.AlternativeTicker
 
         public void Dispose() => UnregisterAll();
 
-        private void Update()
+        private void LateUpdate()
         {
             int count = tickables.Count;
             for (int i = 0; i < count; i++)
-                tickables[i].Tick();
+                tickables[i].LateTick();
         }
     }
 }

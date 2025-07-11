@@ -1,12 +1,8 @@
-namespace UTIRLib.TickerX
+#nullable enable
+namespace UTIRLib.AlternativeTicker
 {
     public interface ILateTickable : ITickableBase
     {
-        public void OnLateTick();
-    }
-
-    public interface ILateTickable<in T> : ITickableBase
-    {
-        public void OnLateTick(T parameter);
+        void LateTick();
     }
 }

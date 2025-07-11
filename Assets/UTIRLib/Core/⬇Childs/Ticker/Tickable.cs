@@ -1,8 +1,9 @@
+using UnityEngine;
+
 #nullable enable
 namespace UTIRLib.AlternativeTicker
 {
-    public interface ITickable : ITickableBase
+    public abstract class Tickable
     {
-        void Tick();
     }
 }

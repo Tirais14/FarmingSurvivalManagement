@@ -1,8 +1,8 @@
 #nullable enable
-
-namespace UTIRLib.TickerX
+namespace UTIRLib.AlternativeTicker
 {
     public interface ITickableBase
     {
+        
     }
 }
