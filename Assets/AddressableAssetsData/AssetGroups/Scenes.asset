@@ -14,17 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Scenes
   m_GUID: e26183dd2f784d64fa859d3f542aedbc
-  m_SerializeEntries:
-  - m_GUID: 4dff9f588b11be140a890eab854fee7d
-    m_Address: Assets/Main/Scenes/Shared/Bootstrapping.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 66a2dcd2952c1c8458a2575fe9ea10b8
-    m_Address: Assets/Main/Scenes/Shared/TestMain.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
   m_SchemaSet:

@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Farming
   m_GUID: 3c8acd8e9129232408791bd9c7ecea12
-  m_SerializeEntries:
-  - m_GUID: 4d510cf05d0e86642b015b2a8a548306
-    m_Address: Assets/Main/Prefabs/Farming/Growable.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
   m_SchemaSet:

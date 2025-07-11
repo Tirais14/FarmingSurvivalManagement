@@ -14,19 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Tiles
   m_GUID: 02897dbcb1a2db84e8d528ae01e08282
-  m_SerializeEntries:
-  - m_GUID: 874aa5e6039e0104c9b0543d02b5d6e9
-    m_Address: Assets/Main/Prefabs/Tiles/Crops
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - farming
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c237c1d919565204ba1d7cb87fd71c9f
-    m_Address: Assets/Main/Prefabs/Tiles/Terrain
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - terrain
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
   m_SchemaSet:

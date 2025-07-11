@@ -14,17 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Items
   m_GUID: 628fc09a819e45040b639f6ba8044451
-  m_SerializeEntries:
-  - m_GUID: 0c8cb03229f624544875b743933d5f1d
-    m_Address: Assets/Main/Prefabs/Items/Placeables
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5cea5dc58e88bc048ad7b9916f6d11d9
-    m_Address: Assets/Main/Prefabs/Items/Basic
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
   m_SchemaSet:

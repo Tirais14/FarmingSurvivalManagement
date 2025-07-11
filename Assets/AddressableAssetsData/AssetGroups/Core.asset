@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Core
   m_GUID: 3addb66aa6841a0418eaa0f49746784a
-  m_SerializeEntries:
-  - m_GUID: 0b477cbd7033ac342922c30d18efbb75
-    m_Address: Assets/Main/Prefabs/Core/SceneSwitcherCanvas.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
   m_SchemaSet:

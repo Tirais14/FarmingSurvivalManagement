@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: UI
   m_GUID: 37aa23f9b55aa264a99c97eb8187b932
-  m_SerializeEntries:
-  - m_GUID: d7ba6d12df026e74b9db77fb8120dba3
-    m_Address: Assets/Main/Prefabs/UI/Inventory/Slot
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1599a88a6bef4f24cb6f7aa9bf6b7522, type: 2}
   m_SchemaSet:
