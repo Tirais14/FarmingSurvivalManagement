@@ -38,19 +38,23 @@ namespace Core
             inputHandler.OnSwitchBuildMode += SwitchPlaceMode;
         }
 
+        //TODO: Incapsulate transitions
         private void SwitchPlaceMode(bool buttonValue)
         {
             if (!buttonValue)
                 return;
 
             gameMode.Exit();
+
             switch (gameMode)
             {
                 case PlaceMode:
                     gameMode = new NormalMode();
+                    GameDebug.Log(nameof(NormalMode));
                     break;
                 case NormalMode:
                     gameMode = new PlaceMode(location, this, inputHandler);
+                    GameDebug.Log(nameof(PlaceMode));
                     break;
                 default:
                     GameDebug.Log($"{gameMode.GetProccessedTypeName()} cannot be switched to {nameof(PlaceMode)}.");

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 #nullable enable
 namespace Core.Map
 {
-    public abstract class Location : MonoX, ILocation
+    public class Location : MonoX, ILocation
     {
         private readonly Dictionary<Vector3Int, ILocationCell> cells = new();
         [GetComponent]

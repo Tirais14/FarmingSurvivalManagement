@@ -42,7 +42,7 @@ namespace Core
 
             primaryAction = playerActions.FindAction("PrimaryAction");
             secondaryAction = playerActions.FindAction("SecondaryAction");
-            switchBuildMode = playerActions.FindAction("SwitchBuildMode");
+            switchBuildMode = playerActions.FindAction("SwitchPlaceMode");
             switchPauseMode = playerActions.FindAction("SwitchPauseMode");
         }
 
