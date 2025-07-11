@@ -9,7 +9,9 @@ namespace Core
 
         public BuildMode(ILocation location)
         {
-
+            this.location = location;
         }
+
+        public void Execute() => throw new System.NotImplementedException();
     }
 }
