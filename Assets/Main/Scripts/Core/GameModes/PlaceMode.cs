@@ -5,13 +5,13 @@ using UTIRLib;
 
 namespace Core.GameModes
 {
-    public class PlaceMode : IGameMode
+    public class PlaceMode : State, IGameMode
     {
-        private readonly ILocation location;
+        private readonly ILocationLayer location;
         private readonly IPlayer player;
         private readonly PlayerInputHandler playerInputHandler;
 
-        public PlaceMode(ILocation location,
+        public PlaceMode(ILocationLayer location,
                          IPlayer player,
                          PlayerInputHandler playerInputHandler)
         {
@@ -20,11 +20,13 @@ namespace Core.GameModes
             this.playerInputHandler = playerInputHandler;
         }
 
-        public void Enter() => RegisterActions();
+        public override void Enter() => RegisterActions();
 
-        public void Execute() { }
+        public override void Execute() { }
 
-        public void Exit() => UnregisterActions();
+        public override void Exit() => UnregisterActions();
+
+        public void Dispose() => Exit();
 
         private void Place(bool value)
         {
@@ -37,7 +39,7 @@ namespace Core.GameModes
                 return;
             }
 
-            if (player.Is<ILocationCell>(out ILocationCell? cell))
+            if (player.Is<ILocationCell>(out var cell))
             {
                 Vector2 pointerPosition = playerInputHandler.PointerPosition;
                 location.SetCell(pointerPosition.FloorToInt().ToVector3(), cell);

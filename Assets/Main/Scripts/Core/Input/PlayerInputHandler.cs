@@ -3,11 +3,12 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UTIRLib;
+using UTIRLib.Init;
 using UTIRLib.InputSystem;
 
 namespace Core
 {
-    public class PlayerInputHandler : MonoX, IPointerHandler
+    public class PlayerInputHandler : MonoX, IPointerHandler, IInitable
     {
         private InputAction pointer = null!;
 
@@ -36,6 +37,11 @@ namespace Core
             SetActions();
 
             RegisterInputs();
+        }
+
+        public void Init()
+        {
+
         }
 
         private void SetActions()

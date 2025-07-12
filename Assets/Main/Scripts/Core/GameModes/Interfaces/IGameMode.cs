@@ -3,12 +3,7 @@ using System;
 
 namespace Core.GameModes
 {
-    public interface IGameMode
+    public interface IGameMode : IState, IDisposable
     {
-        void Enter();
-
-        void Execute();
-
-        void Exit();
     }
 }

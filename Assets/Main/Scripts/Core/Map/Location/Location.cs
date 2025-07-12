@@ -1,72 +1,51 @@
+using Core.Map;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using UTIRLib;
-using UTIRLib.Injector;
-using System;
 using UTIRLib.Diagnostics;
-using System.Collections.Generic;
+using UTIRLib.Linq;
 
 #nullable enable
-namespace Core.Map
+namespace Core
 {
+    [RequireComponent(typeof(Grid))]
     public class Location : MonoX, ILocation
     {
-        private readonly Dictionary<Vector3Int, ILocationCell> cells = new();
-        [GetComponent]
-        private readonly Tilemap tilemap = null!;
+        private ILocationLayer[] layers = null!;
 
-        public int Height => throw new System.NotImplementedException();
-        public int Width => throw new System.NotImplementedException();
+        [field: SerializeField]
+        public BoundsInt Bounds { get; private set; }
 
-        public ILocationCell? this[Vector3Int pos] {
-            get => GetCell(pos);
-            set => SetCell(pos, value);
+        public ILocationLayer this[int index] => layers[index];
+        public int LayersCount => layers.Length;
+
+        protected override void OnAwake()
+        {
+            base.OnAwake();
+
+            SetLayers();
         }
 
-        public ILocationCell? GetCell(Vector3Int pos)
+        public ILocationLayer GetLayer(int index) => layers[index];
+
+        public T? GetLayer<T>(int index) where T : ILocationLayer
         {
-            if (!InBounds(pos))
-                throw new ArgumentOutOfRangeException(nameof(pos));
-
-            if (cells.TryGetValue(pos, out ILocationCell cell))
-                return cell;
-
-            return null;
+            return GetLayer(index).IsQ<T>();
         }
 
-        public bool InBounds(Vector3Int pos)
+        public bool TryGetLayer<T>(int index, [NotNullWhen(true)] out T? result)
+            where T : ILocationLayer
         {
-            return pos.x < Width && pos.y < Height;
+            result = GetLayer<T>(index);
+
+            return result.IsNotDefault();
         }
 
-        public bool RemoveCell(Vector3Int pos)
+        public bool InBounds(Vector3Int pos) => Bounds.Contains(pos);
+
+        private void SetLayers()
         {
-            if (!InBounds(pos))
-                return false;
-
-            if (!cells.TryGetValue(pos, out _))
-                return false;
-
-            cells.Remove(pos);
-            tilemap.SetTile(pos, null);
-
-            return true;
-        }
-
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public void SetCell(Vector3Int pos, ILocationCell? cell)
-        {
-            if (InBounds(pos))
-                throw new ArgumentOutOfRangeException(nameof(pos));
-
-            if (cell.IsNull())
-            {
-                RemoveCell(pos);
-
-                return;
-            }
-
-            tilemap.SetTile(pos, cell.Tile);
+            layers = GetComponentsInChildren<ILocationLayer>();
         }
     }
 }

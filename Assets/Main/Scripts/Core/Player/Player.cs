@@ -1,6 +1,5 @@
-using System;
 using Core.GameModes;
-using Core.Map;
+using System;
 using UTIRLib;
 using UTIRLib.Diagnostics;
 using UTIRLib.UI;
@@ -11,7 +10,6 @@ namespace Core
 {
     public class Player : MonoX, IPlayer
     {
-        private ILocation location = null!;
         private IGameMode gameMode = new NormalMode();
         private PlayerInputHandler inputHandler = null!;
 
@@ -20,9 +18,8 @@ namespace Core
         public bool HasHoldItem => HoldItem.IsNotNull();
 
         [Inject]
-        private void Construct(ILocation location, PlayerInputHandler playerInputHandler)
+        private void Construct(PlayerInputHandler playerInputHandler)
         {
-            this.location = location;
             inputHandler = playerInputHandler;
         }
 

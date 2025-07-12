@@ -11,8 +11,6 @@ namespace Core
         public override void InstallBindings()
         {
             BindEventSystem();
-
-            BindLocation();
         }
 
         private void BindEventSystem()
@@ -20,16 +18,6 @@ namespace Core
             EventSystem eventSystem = FindAnyObjectByType<EventSystem>();
 
             Container.BindInstance(eventSystem).AsSingle();
-        }
-
-        private void BindLocation()
-        {
-            var location = FindAnyObjectByType<Location>(FindObjectsInactive.Include);
-
-            location.gameObject.SetActive(true);
-
-            Container.BindInstance<ILocation>(location)
-                     .AsSingle();
         }
     }
 }

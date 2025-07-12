@@ -1,12 +1,23 @@
 #nullable enable
 namespace Core.GameModes
 {
-    public class PauseMode : IGameMode
+    public class PauseMode : State, IGameMode
     {
-        public void Enter() => throw new System.NotImplementedException();
+        public override void Enter()
+        {
+            throw new System.NotImplementedException();
+        }
 
-        public void Execute() => throw new System.NotImplementedException();
+        public override void Execute()
+        {
+            throw new System.NotImplementedException();
+        }
 
-        public void Exit() => throw new System.NotImplementedException();
+        public override void Exit()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Dispose() => Exit();
     }
 }

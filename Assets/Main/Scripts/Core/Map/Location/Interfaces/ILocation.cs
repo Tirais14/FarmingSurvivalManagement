@@ -1,20 +1,22 @@
+#nullable enable
+using Core.Map;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
-#nullable enable
-namespace Core.Map
+namespace Core
 {
     public interface ILocation
     {
-        int Height { get; }
-        int Width { get; }
+        BoundsInt Bounds { get; }
+        int LayersCount { get; }
+        ILocationLayer this[int index] { get; }
 
-        ILocationCell? this[Vector3Int pos] { get; set; }
+        ILocationLayer GetLayer(int index);
 
-        void SetCell(Vector3Int pos, ILocationCell cell);
+        T? GetLayer<T>(int index) where T : ILocationLayer;
 
-        ILocationCell? GetCell(Vector3Int pos);
-
-        bool RemoveCell(Vector3Int pos);
+        bool TryGetLayer<T>(int index, [NotNullWhen(true)] out T? result)
+            where T : ILocationLayer;
 
         bool InBounds(Vector3Int pos);
     }
