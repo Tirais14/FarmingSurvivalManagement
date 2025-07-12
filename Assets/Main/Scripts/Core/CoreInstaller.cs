@@ -1,5 +1,3 @@
-using Core.Map;
-using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
 
@@ -11,11 +9,15 @@ namespace Core
         public override void InstallBindings()
         {
             BindEventSystem();
+
+            Container.Install<MapInstaller>();
+
+            Container.Install<PlayerInstaller>();
         }
 
         private void BindEventSystem()
         {
-            EventSystem eventSystem = FindAnyObjectByType<EventSystem>();
+            var eventSystem = FindAnyObjectByType<EventSystem>();
 
             Container.BindInstance(eventSystem).AsSingle();
         }

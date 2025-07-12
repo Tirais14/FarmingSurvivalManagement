@@ -1,14 +1,12 @@
-using UnityEngine;
 using Zenject;
 
 #nullable enable
 namespace Core
 {
-    public class PlayerInstaller : MonoInstaller
+    public class PlayerInstaller : Installer
     {
         public override void InstallBindings()
         {
-            
         }
     }
 }

@@ -1,11 +1,10 @@
-using Core.Map;
 using UnityEngine;
 using Zenject;
 
 #nullable enable
 namespace Core
 {
-    public class MapInstaller : MonoInstaller
+    public class MapInstaller : Installer
     {
         public override void InstallBindings()
         {
@@ -14,11 +13,11 @@ namespace Core
 
         private void BindLocation()
         {
-            var location = FindAnyObjectByType<LocationLayer>(FindObjectsInactive.Include);
+            var location = Object.FindAnyObjectByType<Location>(FindObjectsInactive.Include);
 
             location.gameObject.SetActive(true);
 
-            Container.BindInstance<ILocationLayer>(location)
+            Container.BindInstance<ILocation>(location)
                      .AsSingle();
         }
     }

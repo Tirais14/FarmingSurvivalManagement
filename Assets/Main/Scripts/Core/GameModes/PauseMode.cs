@@ -1,14 +1,14 @@
 #nullable enable
 namespace Core.GameModes
 {
-    public class PauseMode : State, IGameMode
+    public class PauseMode : StateBase, IGameMode
     {
         public override void Enter()
         {
             throw new System.NotImplementedException();
         }
 
-        public override void Execute()
+        public void Execute()
         {
             throw new System.NotImplementedException();
         }

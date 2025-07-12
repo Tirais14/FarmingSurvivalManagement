@@ -10,7 +10,7 @@ namespace Core
 {
     public class Player : MonoX, IPlayer
     {
-        private IGameMode gameMode = new NormalMode();
+        private IGameMode gameMode = new IdleMode();
         private PlayerInputHandler inputHandler = null!;
 
         public Type GameModeType => gameMode.GetType();
@@ -46,10 +46,10 @@ namespace Core
             switch (gameMode)
             {
                 case PlaceMode:
-                    gameMode = new NormalMode();
-                    GameDebug.Log(nameof(NormalMode));
+                    gameMode = new IdleMode();
+                    GameDebug.Log(nameof(IdleMode));
                     break;
-                case NormalMode:
+                case IdleMode:
                     gameMode = new PlaceMode(location, this, inputHandler);
                     GameDebug.Log(nameof(PlaceMode));
                     break;

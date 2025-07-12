@@ -5,7 +5,7 @@ namespace Core
     {
         None,
         Pause,
-        Normal,
+        Idle,
         Place
     }
 }

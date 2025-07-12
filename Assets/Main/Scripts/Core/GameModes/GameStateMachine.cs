@@ -2,17 +2,18 @@ using Core.GameModes;
 using System;
 using UTIRLib;
 using Zenject;
-using UnityEngine;
 
+#nullable enable
 namespace Core
 {
-    public sealed class GameStateMachine : MonoX, IStateMachine
+    public sealed class GameStateMachine : MonoX, IStateMachine<IState>
     {
-        private IGameMode gameMode = new PauseMode();
+        private StateMachine stateMachine = null!;
+        private IGameMode gameMode = null!;
         private PlayerInputHandler playerInputHandler;
 
         private PauseMode pauseMode = null!;
-        private NormalMode normalMode = null!;
+        private IdleMode idleMode = null!;
         private PlaceMode placeMode = null!;
 
         public GameMode GameMode => GetGameMode();
@@ -23,9 +24,18 @@ namespace Core
             this.playerInputHandler = playerInputHandler;
         }
 
+        protected override void OnAwake()
+        {
+            base.OnAwake();
+
+            stateMachine = new StateMachine(idleMode);
+        }
+
         protected override void OnStart()
         {
             base.OnStart();
+
+            BindInputs();
         }
 
         private void BindInputs()
@@ -33,29 +43,51 @@ namespace Core
             playerInputHandler.OnSwitchBuildMode += SwitchPlaceMode;
         }
 
+        private void UnbindInputs()
+        {
+            playerInputHandler.OnSwitchBuildMode -= SwitchPlaceMode;
+        }
+
         private GameMode GetGameMode()
         {
             return gameMode switch
             {
                 PauseMode => GameMode.Pause,
-                NormalMode => GameMode.Normal,
+                IdleMode => GameMode.Idle,
                 PlaceMode => GameMode.Place,
                 _ => throw new InvalidOperationException(),
             };
         }
+
+        private void ResetGameMode() => gameMode = idleMode;
 
         private void SwitchPlaceMode(bool value)
         {
             if (!value)
                 return;
 
-            if (GameMode == GameMode.Place)
-                gameMode = 
+            switch (GameMode)
+            {
+                case GameMode.None:
+                    break;
+                case GameMode.Pause:
+                    break;
+                case GameMode.Idle:
+                    gameMode = placeMode;
+                    break;
+                case GameMode.Place:
+                    ResetGameMode();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void Update()
         {
             gameMode.Execute();
         }
+
+        private void OnDisable() => UnbindInputs();
     }
 }

@@ -5,18 +5,16 @@ using UTIRLib.Diagnostics;
 #nullable enable
 namespace Core
 {
-    public abstract class State : IState
+    public abstract class StateBase : IStateBase
     {
         private readonly Flags<Type> transitionTypes;
 
-        protected State(params Type[] transitionTypes)
+        protected StateBase(params Type[] transitionTypes)
         {
             this.transitionTypes = new Flags<Type>(transitionTypes);
         }
 
         public abstract void Enter();
-
-        public abstract void Execute();
 
         public abstract void Exit();
 

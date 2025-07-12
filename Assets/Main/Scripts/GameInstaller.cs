@@ -15,6 +15,8 @@ namespace Game
             BindPointerHandler();
 
             BindPlayer();
+
+            BindGameModeFactory();
         }
 
         private void BindPlayerInputHandler()
@@ -42,6 +44,11 @@ namespace Game
 
             Container.BindInstance<IPlayer>(player)
                      .AsSingle();
+        }
+
+        private void BindGameModeFactory()
+        {
+            Container.Bind<GameModeFactory>().AsSingle();
         }
     }
 }

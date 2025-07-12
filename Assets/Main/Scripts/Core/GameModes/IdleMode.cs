@@ -1,10 +1,10 @@
 namespace Core.GameModes
 {
-    public class NormalMode : State, IGameMode
+    public class IdleMode : StateBase, IGameMode
     {
         public override void Enter() { }
 
-        public override void Execute() { }
+        public void Execute() { }
 
         public override void Exit() { }
 
