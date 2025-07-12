@@ -1,16 +1,18 @@
-using Core.Map;
+using Core;
 using UnityEngine;
+using UTIRLib.InputSystem;
 using Zenject;
 
-namespace Core
+#nullable enable
+namespace Game
 {
-    public class GlobalInstaller : MonoInstaller
+    public class GameInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
             BindPlayerInputHandler();
 
-            BindLocation();
+            BindPointerHandler();
 
             BindPlayer();
         }
@@ -25,14 +27,11 @@ namespace Core
                      .AsSingle();
         }
 
-        private void BindLocation()
+        private void BindPointerHandler()
         {
-            var location = FindAnyObjectByType<Location>(FindObjectsInactive.Include);
+            var inputHandler = FindAnyObjectByType<PlayerInputHandler>(FindObjectsInactive.Include);
 
-            location.gameObject.SetActive(true);
-
-            Container.BindInstance<ILocation>(location)
-                     .AsSingle();
+            Container.BindInstance<IPointerHandler>(inputHandler).AsSingle();
         }
 
         private void BindPlayer()

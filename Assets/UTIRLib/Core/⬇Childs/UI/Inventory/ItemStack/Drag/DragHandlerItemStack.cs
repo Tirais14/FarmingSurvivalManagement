@@ -6,17 +6,11 @@ using UTIRLib.Injector;
 
 namespace UTIRLib.UI
 {
-    public class ItemStackDragHandler : DragHandler<DragItemStack>
+    public class DragHandlerItemStack : DragHandler<DragItemStack>
     {
         [SerializeField]
         [GetComponentInParentIfNull]
         protected ItemStackModelBase sourceItemStack = null!;
-
-        protected override void OnAwake()
-        {
-            base.OnAwake();
-            userInterface = GetComponentInParent<UserInterface>();
-        }
 
         public override void OnBeginDrag(PointerEventData eventData)
         {
@@ -34,9 +28,7 @@ namespace UTIRLib.UI
         {
             base.OnDrop(eventData);
             if (eventData.selectedObject.TryGetComponent<ItemStackModelBase>(out var droppedItemStack))
-            {
                 sourceItemStack.Put(droppedItemStack);
-            }
         }
     }
 }

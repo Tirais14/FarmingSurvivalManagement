@@ -1,6 +1,7 @@
 using TMPro;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using UTIRLib.Attributes;
 using UTIRLib.Diagnostics;
 using UTIRLib.Injector;
@@ -9,7 +10,7 @@ using UTIRLib.Injector;
 
 namespace UTIRLib.UI
 {
-    [RequireComponent(typeof(ItemStackViewModel))]
+    [RequireComponent(typeof(Image), typeof(ItemStackViewModel))]
     public class ItemStackView : View<ItemStackViewModel>, IDragInteractable<IItemStack>
     {
         [Optional]

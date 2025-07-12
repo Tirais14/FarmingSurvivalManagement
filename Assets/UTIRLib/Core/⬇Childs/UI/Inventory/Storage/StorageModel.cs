@@ -7,7 +7,6 @@ using UniRx;
 using UnityEngine;
 using UTIRLib.Attributes;
 using UTIRLib.Diagnostics;
-using UTIRLib.Extensions;
 
 #nullable enable
 

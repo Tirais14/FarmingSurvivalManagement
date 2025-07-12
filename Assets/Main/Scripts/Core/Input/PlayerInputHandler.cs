@@ -3,10 +3,11 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UTIRLib;
+using UTIRLib.InputSystem;
 
 namespace Core
 {
-    public class PlayerInputHandler : MonoX
+    public class PlayerInputHandler : MonoX, IPointerHandler
     {
         private InputAction pointer = null!;
 
@@ -14,11 +15,14 @@ namespace Core
         private InputActionAsset inputs = null!;
 
         public Vector2 PointerPosition => pointer.ReadValue<Vector2>();
+        public Vector2 WorldPointerPosition {
+            get => Camera.main.ScreenToWorldPoint(pointer.ReadValue<Vector2>());
+        }
 
-        private InputAction primaryAction = null!;
-        private InputAction secondaryAction = null!;
-        private InputAction switchBuildMode = null!;
-        private InputAction switchPauseMode = null!;
+        public InputAction PrimaryAction { get; private set; } = null!;
+        public InputAction SecondaryAction { get; private set; } = null!;
+        public InputAction SwitchBuildMode { get; private set; } = null!;
+        public InputAction SwitchPauseMode { get; private set; } = null!;
 
         public event Action<bool> OnPrimaryAction = null!;
         public event Action<bool> OnSecondaryAction = null!;
@@ -40,30 +44,30 @@ namespace Core
 
             pointer = inputs.FindActionMap("UI").FindAction("Point");
 
-            primaryAction = playerActions.FindAction("PrimaryAction");
-            secondaryAction = playerActions.FindAction("SecondaryAction");
-            switchBuildMode = playerActions.FindAction("SwitchPlaceMode");
-            switchPauseMode = playerActions.FindAction("SwitchPauseMode");
+            PrimaryAction = playerActions.FindAction("PrimaryAction");
+            SecondaryAction = playerActions.FindAction("SecondaryAction");
+            SwitchBuildMode = playerActions.FindAction("SwitchPlaceMode");
+            SwitchPauseMode = playerActions.FindAction("SwitchPauseMode");
         }
 
         private void RegisterInputs()
         {
-            primaryAction.performed += (context) =>
+            PrimaryAction.performed += (context) =>
             {
                 OnPrimaryAction?.Invoke(context.ReadValueAsButton());
             };
 
-            secondaryAction.performed += (context) =>
+            SecondaryAction.performed += (context) =>
             {
                 OnSecondaryAction?.Invoke(context.ReadValueAsButton());
             };
 
-            switchBuildMode.performed += (context) =>
+            SwitchBuildMode.performed += (context) =>
             {
                 OnSwitchBuildMode?.Invoke(context.ReadValueAsButton());
             };
 
-            switchPauseMode.performed += (context) =>
+            SwitchPauseMode.performed += (context) =>
             {
                 OnSwitchPauseMode?.Invoke(context.ReadValueAsButton());
             };
