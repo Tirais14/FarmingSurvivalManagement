@@ -3,12 +3,11 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UTIRLib;
-using UTIRLib.Init;
 using UTIRLib.InputSystem;
 
 namespace Core
 {
-    public class PlayerInputHandler : MonoX, IPointerHandler, IInitable
+    public class PlayerInputHandler : MonoXInitable, IPointerHandler
     {
         private InputAction pointer = null!;
 
@@ -30,18 +29,11 @@ namespace Core
         public event Action<bool> OnSwitchBuildMode = null!;
         public event Action<bool> OnSwitchPauseMode = null!;
 
-        protected override void OnAwake()
+        protected override void OnInit()
         {
-            base.OnAwake();
-
             SetActions();
 
             RegisterInputs();
-        }
-
-        public void Init()
-        {
-
         }
 
         private void SetActions()

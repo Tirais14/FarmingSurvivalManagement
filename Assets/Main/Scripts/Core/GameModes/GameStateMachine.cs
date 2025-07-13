@@ -6,7 +6,7 @@ using Zenject;
 #nullable enable
 namespace Core
 {
-    public sealed class GameStateMachine : MonoX, IStateMachine<IState>
+    public sealed class GameStateMachine : MonoXInitable, IStateMachine<IState>
     {
         private StateMachine stateMachine = null!;
         private IGameMode gameMode = null!;
@@ -24,10 +24,8 @@ namespace Core
             this.playerInputHandler = playerInputHandler;
         }
 
-        protected override void OnAwake()
+        protected override void OnInit()
         {
-            base.OnAwake();
-
             stateMachine = new StateMachine(idleMode);
         }
 
