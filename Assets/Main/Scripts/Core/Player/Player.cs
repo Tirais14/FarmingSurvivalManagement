@@ -1,5 +1,3 @@
-using Core.GameModes;
-using System;
 using UTIRLib;
 using UTIRLib.Diagnostics;
 using UTIRLib.UI;
@@ -10,10 +8,8 @@ namespace Core
 {
     public class Player : MonoX, IPlayer
     {
-        private IGameMode gameMode = new IdleMode();
         private PlayerInputHandler inputHandler = null!;
 
-        public Type GameModeType => gameMode.GetType();
         public IItem? HoldItem { get; set; }
         public bool HasHoldItem => HoldItem.IsNotNull();
 
@@ -32,35 +28,13 @@ namespace Core
 
         private void BindInputs()
         {
-            inputHandler.OnSwitchBuildMode += SwitchPlaceMode;
         }
 
-        //TODO: Incapsulate transitions
-        private void SwitchPlaceMode(bool buttonValue)
+        private void UnbindInputs()
         {
-            if (!buttonValue)
-                return;
 
-            gameMode.Exit();
-
-            switch (gameMode)
-            {
-                case PlaceMode:
-                    gameMode = new IdleMode();
-                    GameDebug.Log(nameof(IdleMode));
-                    break;
-                case IdleMode:
-                    gameMode = new PlaceMode(location, this, inputHandler);
-                    GameDebug.Log(nameof(PlaceMode));
-                    break;
-                default:
-                    GameDebug.Log($"{gameMode.GetProccessedTypeName()} cannot be switched to {nameof(PlaceMode)}.");
-                    break;
-            }
-
-            gameMode.Enter();
         }
 
-        private void Update() => gameMode.Execute();
+        private void OnDisable() => UnbindInputs();
     }
 }

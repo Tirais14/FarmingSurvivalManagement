@@ -21,9 +21,8 @@ namespace Game
 
         private void BindPlayerInputHandler()
         {
-            var inputHandler = FindAnyObjectByType<PlayerInputHandler>(FindObjectsInactive.Include);
-
-            inputHandler.gameObject.SetActive(true);
+            var inputHandler = FindAnyObjectByType<PlayerInputHandler>(
+                               FindObjectsInactive.Include);
 
             Container.BindInstance(inputHandler)
                      .AsSingle();
@@ -31,7 +30,8 @@ namespace Game
 
         private void BindPointerHandler()
         {
-            var inputHandler = FindAnyObjectByType<PlayerInputHandler>(FindObjectsInactive.Include);
+            var inputHandler = FindAnyObjectByType<PlayerInputHandler>(
+                               FindObjectsInactive.Include);
 
             Container.BindInstance<IPointerHandler>(inputHandler).AsSingle();
         }
@@ -39,8 +39,6 @@ namespace Game
         private void BindPlayer()
         {
             var player = FindAnyObjectByType<Player>(FindObjectsInactive.Include);
-
-            player.gameObject.SetActive(true);
 
             Container.BindInstance<IPlayer>(player)
                      .AsSingle();

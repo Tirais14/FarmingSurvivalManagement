@@ -1,5 +1,6 @@
 using UnityEngine.EventSystems;
 using Zenject;
+using UTIRLib.Zenject;
 
 #nullable enable
 namespace Core
@@ -10,9 +11,9 @@ namespace Core
         {
             BindEventSystem();
 
-            Container.Install<MapInstaller>();
+            BindGameModeFactory();
 
-            Container.Install<PlayerInstaller>();
+            Container.Install<MapInstaller>();
         }
 
         private void BindEventSystem()
@@ -20,6 +21,16 @@ namespace Core
             var eventSystem = FindAnyObjectByType<EventSystem>();
 
             Container.BindInstance(eventSystem).AsSingle();
+        }
+
+        private void BindGameStateMachineSwitchStrategy()
+        {
+
+        }
+
+        private void BindGameModeFactory()
+        {
+            Container.Bind<GameModeFactory>().AsSingle();
         }
     }
 }

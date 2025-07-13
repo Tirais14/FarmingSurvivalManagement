@@ -7,6 +7,7 @@ using UTIRLib.InputSystem;
 
 namespace Core
 {
+    [InitFirst]
     public class PlayerInputHandler : MonoXInitable, IPointerHandler
     {
         private InputAction pointer = null!;
@@ -21,12 +22,12 @@ namespace Core
 
         public InputAction PrimaryAction { get; private set; } = null!;
         public InputAction SecondaryAction { get; private set; } = null!;
-        public InputAction SwitchBuildMode { get; private set; } = null!;
+        public InputAction SwitchPlaceMode { get; private set; } = null!;
         public InputAction SwitchPauseMode { get; private set; } = null!;
 
         public event Action<bool> OnPrimaryAction = null!;
         public event Action<bool> OnSecondaryAction = null!;
-        public event Action<bool> OnSwitchBuildMode = null!;
+        public event Action<bool> OnSwitchPlaceMode = null!;
         public event Action<bool> OnSwitchPauseMode = null!;
 
         protected override void OnInit()
@@ -44,7 +45,7 @@ namespace Core
 
             PrimaryAction = playerActions.FindAction("PrimaryAction");
             SecondaryAction = playerActions.FindAction("SecondaryAction");
-            SwitchBuildMode = playerActions.FindAction("SwitchPlaceMode");
+            SwitchPlaceMode = playerActions.FindAction("SwitchPlaceMode");
             SwitchPauseMode = playerActions.FindAction("SwitchPauseMode");
         }
 
@@ -60,9 +61,9 @@ namespace Core
                 OnSecondaryAction?.Invoke(context.ReadValueAsButton());
             };
 
-            SwitchBuildMode.performed += (context) =>
+            SwitchPlaceMode.performed += (context) =>
             {
-                OnSwitchBuildMode?.Invoke(context.ReadValueAsButton());
+                OnSwitchPlaceMode?.Invoke(context.ReadValueAsButton());
             };
 
             SwitchPauseMode.performed += (context) =>
