@@ -1,17 +1,7 @@
 {
     "name": "Game",
     "rootNamespace": "Game",
-    "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-        "GUID:ccfae93915ddbc1458212374e30b5916",
-        "GUID:f075a542ced350c429be64acb2ba13b2",
-        "GUID:da353483a73a18145801b9232b5378a2",
-        "GUID:d2872dbf20cb9874e9a6ada3585f81fe",
-        "GUID:cec408dde85aac047a78e88de30b4173",
-        "GUID:23da49f85ff35bb46b6b21af26f2445d",
-        "GUID:86090fba37b91534998945c10134b783",
-        "GUID:76bf9a9e4c1c607428e0089caaac720a"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

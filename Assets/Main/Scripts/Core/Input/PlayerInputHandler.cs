@@ -20,10 +20,15 @@ namespace Core
             get => Camera.main.ScreenToWorldPoint(pointer.ReadValue<Vector2>());
         }
 
-        public InputAction PrimaryAction { get; private set; } = null!;
-        public InputAction SecondaryAction { get; private set; } = null!;
-        public InputAction SwitchPlaceMode { get; private set; } = null!;
-        public InputAction SwitchPauseMode { get; private set; } = null!;
+        public InputAction Input_PrimaryAction { get; private set; } = null!;
+        public InputAction Input_SecondaryAction { get; private set; } = null!;
+        public InputAction Input_SwitchPlaceMode { get; private set; } = null!;
+        public InputAction Input_SwitchPauseMode { get; private set; } = null!;
+
+        public bool PrimaryActionValue { get; private set; }
+        public bool SecondaryActionValue { get; private set; }
+        public bool SwitchPlaceModeValue { get; private set; }
+        public bool SwitchPauseModeValue { get; private set; }
 
         public event Action<bool> OnPrimaryAction = null!;
         public event Action<bool> OnSecondaryAction = null!;
@@ -43,32 +48,36 @@ namespace Core
 
             pointer = inputs.FindActionMap("UI").FindAction("Point");
 
-            PrimaryAction = playerActions.FindAction("PrimaryAction");
-            SecondaryAction = playerActions.FindAction("SecondaryAction");
-            SwitchPlaceMode = playerActions.FindAction("SwitchPlaceMode");
-            SwitchPauseMode = playerActions.FindAction("SwitchPauseMode");
+            Input_PrimaryAction = playerActions.FindAction("PrimaryAction");
+            Input_SecondaryAction = playerActions.FindAction("SecondaryAction");
+            Input_SwitchPlaceMode = playerActions.FindAction("SwitchPlaceMode");
+            Input_SwitchPauseMode = playerActions.FindAction("SwitchPauseMode");
         }
 
         private void RegisterInputs()
         {
-            PrimaryAction.performed += (context) =>
+            Input_PrimaryAction.performed += (context) =>
             {
-                OnPrimaryAction?.Invoke(context.ReadValueAsButton());
+                PrimaryActionValue = context.ReadValueAsButton();
+                OnPrimaryAction?.Invoke(PrimaryActionValue);
             };
 
-            SecondaryAction.performed += (context) =>
+            Input_SecondaryAction.performed += (context) =>
             {
-                OnSecondaryAction?.Invoke(context.ReadValueAsButton());
+                SecondaryActionValue = context.ReadValueAsButton();
+                OnSecondaryAction?.Invoke(SecondaryActionValue);
             };
 
-            SwitchPlaceMode.performed += (context) =>
+            Input_SwitchPlaceMode.performed += (context) =>
             {
-                OnSwitchPlaceMode?.Invoke(context.ReadValueAsButton());
+                SwitchPauseModeValue = context.ReadValueAsButton();
+                OnSwitchPlaceMode?.Invoke(SwitchPauseModeValue);
             };
 
-            SwitchPauseMode.performed += (context) =>
+            Input_SwitchPauseMode.performed += (context) =>
             {
-                OnSwitchPauseMode?.Invoke(context.ReadValueAsButton());
+                SwitchPauseModeValue = context.ReadValueAsButton();
+                OnSwitchPauseMode?.Invoke(SwitchPauseModeValue);
             };
         }
     }

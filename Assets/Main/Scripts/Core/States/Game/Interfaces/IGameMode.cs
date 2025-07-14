@@ -1,7 +1,7 @@
 #nullable enable
 using UTIRLib.Patterns.States;
 
-namespace Core.GameModes
+namespace Core
 {
     public interface IGameMode : IState
     {

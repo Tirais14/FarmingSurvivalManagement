@@ -1,6 +1,5 @@
 using UnityEngine.EventSystems;
 using Zenject;
-using UTIRLib.Zenject;
 
 #nullable enable
 namespace Core
@@ -21,11 +20,6 @@ namespace Core
             var eventSystem = FindAnyObjectByType<EventSystem>();
 
             Container.BindInstance(eventSystem).AsSingle();
-        }
-
-        private void BindGameStateMachineSwitchStrategy()
-        {
-
         }
 
         private void BindGameModeFactory()

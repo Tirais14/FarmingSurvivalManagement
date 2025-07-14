@@ -1,4 +1,3 @@
-using Core.GameModes;
 using System;
 using UTIRLib;
 using UTIRLib.Patterns.States;
@@ -15,9 +14,10 @@ namespace Core
         public Type PlayingStateType => sm.PlayingStateType;
 
         [Inject]
-        private void Construct(SwitchStrategy switchStrategy)
+        private void Construct(PlayerInputHandler playerInputHandler,
+                               GameModeFactory gameModeFactory)
         {
-            this.switchStrategy = switchStrategy;
+            switchStrategy = new SwitchStrategy(playerInputHandler, gameModeFactory);
         }
 
         protected override void OnInit()
@@ -27,30 +27,27 @@ namespace Core
 
         private void Update() => sm.Execute();
 
-        private void OnDestroy() => switchStrategy.Dispose();
-
         void IStateMachine<IGameMode>.PlayState(IGameMode state)
         {
-            GameDebug.Warning($"This operation is moqed.", this);
+            GameDebug.Warning($"{nameof(IStateMachine<IGameMode>.PlayState)} operation is moqed.", this);
         }
 
         void IStateMachine.PlayPreviousState()
         {
-            GameDebug.Warning($"This operation is moqed.", this);
+            GameDebug.Warning($"{nameof(IStateMachine.PlayPreviousState)} operation is moqed.", this);
         }
 
         void IStateMachine.PlayDefaultState()
         {
-            GameDebug.Warning($"This operation is moqed.", this);
+            GameDebug.Warning($"{nameof(IStateMachine.PlayDefaultState)} operation is moqed.", this);
         }
 
         void IExecutable.Execute()
         {
-            GameDebug.Warning($"This operation is moqed.", this);
+            GameDebug.Warning($"{nameof(IExecutable.Execute)} operation is moqed.", this);
         }
 
-        public partial class SwitchStrategy : StateMachine<IGameMode>.SwitchStrategy,
-            IDisposable
+        public partial class SwitchStrategy
         {
         }
     }

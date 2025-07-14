@@ -1,7 +1,7 @@
 using UTIRLib.Patterns.States;
 
 #nullable enable
-namespace Core.GameModes
+namespace Core
 {
     public class IdleMode : StateBase, IGameMode
     {

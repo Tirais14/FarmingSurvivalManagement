@@ -13,11 +13,9 @@ namespace Core
 
         private void BindLocation()
         {
-            var location = Object.FindAnyObjectByType<Location>(FindObjectsInactive.Include);
+            ILocation location = Object.FindAnyObjectByType<Location>(FindObjectsInactive.Include);
 
-            location.gameObject.SetActive(true);
-
-            Container.BindInstance<ILocation>(location)
+            Container.BindInstance(location)
                      .AsSingle();
         }
     }

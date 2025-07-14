@@ -1,61 +1,54 @@
-using Core.GameModes;
 using UTIRLib;
+using UTIRLib.Patterns.States;
 
+#nullable enable
 namespace Core
 {
     public sealed partial class GameStateMachine
     {
-        public partial class SwitchStrategy
+        public partial class SwitchStrategy :
+            StateMachine<IGameMode>.SwitchStrategy
         {
-            private readonly GameStateMachine gameStateMachine;
             private readonly PlayerInputHandler playerInputHandler;
 
             private readonly PauseMode pauseMode;
-            private readonly IdleMode idleMode;
             private readonly PlaceMode placeMode;
 
-            private IGameMode nextGameMode = null!;
-
-            public override IGameMode DefaultState => idleMode;
-
-            public SwitchStrategy(GameStateMachine gameStateMachine,
-                                  PlayerInputHandler playerInputHandler,
-                                  GameModeFactory gameModeFactory)
+            public SwitchStrategy(PlayerInputHandler playerInputHandler,
+                                  GameModeFactory gameModeFactory) 
+                : base(gameModeFactory.Create<IdleMode>())
             {
-                this.gameStateMachine = gameStateMachine;
                 this.playerInputHandler = playerInputHandler;
 
                 pauseMode = gameModeFactory.Create<PauseMode>();
-                idleMode = gameModeFactory.Create<IdleMode>();
                 placeMode = gameModeFactory.Create<PlaceMode>();
-
-                BindInputs();
             }
 
-            public override IGameMode GetNextState() => nextGameMode;
-
-            private void BindInputs()
+            public override IGameMode GetNextState()
             {
-                playerInputHandler.OnSwitchPlaceMode += SwitchPlaceMode;
+                if (playerInputHandler.SwitchPlaceModeValue)
+                    SelectedState = SwitchPlaceMode();
+                else if (playerInputHandler.SwitchPauseModeValue)
+                    SelectedState = SwitchPauseMode();
+
+                return SelectedState;
             }
 
-            private void UnbindInputs()
+            private IGameMode SwitchPauseMode()
             {
-                playerInputHandler.OnSwitchPlaceMode -= SwitchPlaceMode;
-            }
-
-            private void SwitchPlaceMode(bool value)
-            {
-                if (!value)
-                    return;
-
-                if (gameStateMachine.PlayingStateType.Is<PlaceMode>())
-                    nextGameMode = idleMode;
+                if (selectedStateType.Is<PauseMode>())
+                    return DefaultState;
                 else
-                    nextGameMode = placeMode;
+                    return pauseMode;
             }
 
-            public void Dispose() => UnbindInputs();
+            private IGameMode SwitchPlaceMode()
+            {
+                if (selectedStateType.Is<PlaceMode>())
+                    return DefaultState;
+                else
+                    return placeMode;
+            }
         }
     }
 }
