@@ -3,22 +3,14 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UTIRLib;
-using UTIRLib.InputSystem;
 
 namespace Core
 {
     [InitFirst]
-    public class PlayerInputHandler : MonoXInitable, IPointerHandler
+    public class PlayerInputHandler : MonoXInitable
     {
-        private InputAction pointer = null!;
-
         [SerializeField]
         private InputActionAsset inputs = null!;
-
-        public Vector2 PointerPosition => pointer.ReadValue<Vector2>();
-        public Vector2 WorldPointerPosition {
-            get => Camera.main.ScreenToWorldPoint(pointer.ReadValue<Vector2>());
-        }
 
         public InputAction Input_PrimaryAction { get; private set; } = null!;
         public InputAction Input_SecondaryAction { get; private set; } = null!;
@@ -45,8 +37,6 @@ namespace Core
         private void SetActions()
         {
             InputActionMap playerActions = inputs.FindActionMap("Player");
-
-            pointer = inputs.FindActionMap("UI").FindAction("Point");
 
             Input_PrimaryAction = playerActions.FindAction("PrimaryAction");
             Input_SecondaryAction = playerActions.FindAction("SecondaryAction");

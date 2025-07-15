@@ -11,8 +11,10 @@ namespace Core
         {
             base.OnAwake();
 
-            SceneInitializer.Init<PlayerInputHandler>();
-            SceneInitializer.Init<GameStateMachine>();
+            SceneInitializer.InitAll();
+            //SceneInitializer.Init<PlayerInputHandler>();
+            //SceneInitializer.Init<PointerHandler>();
+            //SceneInitializer.Init<GameStateMachine>();
         }
     }
 }

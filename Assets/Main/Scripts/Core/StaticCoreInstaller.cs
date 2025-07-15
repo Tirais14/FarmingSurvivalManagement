@@ -1,15 +1,13 @@
-using Core;
 using UnityEngine;
 using UTIRLib.InputSystem;
+using UTIRLib.Zenject;
 using Zenject;
 
 #nullable enable
-namespace Game
+namespace Core
 {
     public class StaticCoreInstaller : MonoInstaller
     {
-        private PlayerInputHandler playerInputHandler = null!;
-
         public override void InstallBindings()
         {
             BindPlayerInputHandler();
@@ -21,24 +19,19 @@ namespace Game
 
         private void BindPlayerInputHandler()
         {
-            playerInputHandler = FindAnyObjectByType<PlayerInputHandler>(
-                                 FindObjectsInactive.Include);
-
-            Container.BindInstance(playerInputHandler)
+            Container.BindFromScene<PlayerInputHandler>(FindObjectsInactive.Include)
                      .AsSingle();
         }
 
         private void BindPointerHandler()
         {
-            Container.BindInstance<IPointerHandler>(playerInputHandler).AsSingle();
+            Container.BindFromScene<PointerHandler, IPointerHandler>(FindObjectsInactive.Include)
+                     .AsSingle();
         }
 
         private void BindPlayer()
         {
-            var player = FindAnyObjectByType<Player>(FindObjectsInactive.Include);
-
-            Container.BindInstance<IPlayer>(player)
-                     .AsSingle();
+            Container.BindFromScene<Player>().AsSingle();
         }
     }
 }
