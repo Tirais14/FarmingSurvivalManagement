@@ -11,7 +11,7 @@ namespace Core
         {
             base.OnAwake();
 
-            SceneInitializer.InitAll();
+            SceneInitializer.InitAllObjects();
             //SceneInitializer.Init<PlayerInputHandler>();
             //SceneInitializer.Init<PointerHandler>();
             //SceneInitializer.Init<GameStateMachine>();
