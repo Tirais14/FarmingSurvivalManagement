@@ -1,5 +1,5 @@
-using UTIRLib;
 using UnityEngine;
+using UTIRLib;
 
 #nullable enable
 namespace Core
@@ -12,9 +12,6 @@ namespace Core
             base.OnAwake();
 
             SceneInitializer.InitAllObjects();
-            //SceneInitializer.Init<PlayerInputHandler>();
-            //SceneInitializer.Init<PointerHandler>();
-            //SceneInitializer.Init<GameStateMachine>();
         }
     }
 }

@@ -97,6 +97,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3186296645772624096}
     m_Modifications:
+    - target: {fileID: 4906597377772672312, guid: ed46b6ce38780cd4bb922634ce15d863, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884009638360406051, guid: ed46b6ce38780cd4bb922634ce15d863, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 426f9dabd26c9654ca96950ec175e77d, type: 3}
+    - target: {fileID: 5884009638360406051, guid: ed46b6ce38780cd4bb922634ce15d863, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6247923771450223842, guid: ed46b6ce38780cd4bb922634ce15d863, type: 3}
       propertyPath: m_Name
       value: InventoryItemStack
