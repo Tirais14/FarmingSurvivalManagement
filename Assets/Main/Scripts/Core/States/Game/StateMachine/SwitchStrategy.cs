@@ -1,3 +1,4 @@
+using Core.InputSystem;
 using UTIRLib;
 using UTIRLib.Patterns.States;
 
@@ -26,9 +27,9 @@ namespace Core
 
             public override IGameMode GetNextState()
             {
-                if (playerInputHandler.SwitchPlaceModeValue)
+                if (playerInputHandler.SwitchPauseModeInput.Value)
                     SelectedState = SwitchPlaceMode();
-                else if (playerInputHandler.SwitchPauseModeValue)
+                else if (playerInputHandler.SwitchPauseModeInput.Value)
                     SelectedState = SwitchPauseMode();
 
                 return SelectedState;

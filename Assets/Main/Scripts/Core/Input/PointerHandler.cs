@@ -4,7 +4,7 @@ using UTIRLib;
 using UTIRLib.InputSystem;
 
 #nullable enable
-namespace Core
+namespace Core.InputSystem
 {
     [InitFirst]
     public class PointerHandler : MonoXInitable, IPointerHandler

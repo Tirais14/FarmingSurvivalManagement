@@ -6,7 +6,7 @@ namespace Core
 #if UNITY_EDITOR
         public static class Editor
         {
-            public const int GAME_ASSET_MENU_ORDER = -990;
+            public const int GAME_ASSET_MENU_ORDER = 100;
         }
 #endif
     }

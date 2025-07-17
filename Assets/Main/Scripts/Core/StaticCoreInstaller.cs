@@ -1,4 +1,6 @@
+using Core.InputSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UTIRLib.InputSystem;
 using UTIRLib.Zenject;
 using Zenject;
@@ -19,7 +21,10 @@ namespace Core
 
         private void BindPlayerInputHandler()
         {
-            Container.BindFromScene<PlayerInputHandler>(FindObjectsInactive.Include)
+            var inputActions = Resources.Load<InputActionAsset>("Input Actions");
+            var inputHandler = new PlayerInputHandler(inputActions);
+
+            Container.BindInstance(inputHandler)
                      .AsSingle();
         }
 
