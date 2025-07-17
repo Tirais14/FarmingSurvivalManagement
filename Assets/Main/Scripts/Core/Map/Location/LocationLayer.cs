@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 using UTIRLib;
 using UTIRLib.Collections;
 using UTIRLib.Diagnostics;
-using UTIRLib.Injector;
+using UTIRLib.ComponentSetter;
 using static UnityEngine.Tilemaps.Tilemap;
 
 #nullable enable
@@ -16,12 +16,12 @@ namespace Core.Map
     {
         private Map<ILocationCell> cellMap = null!;
 
-        [GetComponent]
+        [GetSelfAttribute]
         private Tilemap tilemap = null!;
 
         public BoundsInt Bounds => Parent.Bounds;
 
-        [GetComponentInParent]
+        [GetByParentAttribute]
         public ILocation Parent { get; private set; } = null!;
 
         public event Action<SyncTile[]>? OnTileChanged;
