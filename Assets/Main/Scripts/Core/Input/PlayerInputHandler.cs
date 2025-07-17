@@ -2,7 +2,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UTIRLib.InputSystem;
+using UTIRLib.Attributes;
+using UTIRLib.Utils;
 
 namespace Core.InputSystem
 {
@@ -11,22 +12,34 @@ namespace Core.InputSystem
         private readonly InputActionAsset inputActionAsset;
         private bool disposedValue;
 
+        [RequiredMember]
         public IInputAction<Vector2> MoveInput { get; private set; } = null!;
+
+        [RequiredMember]
         public IInputAction<bool> PrimaryActionInput { get; private set; } = null!;
+
+        [RequiredMember]
         public IInputAction<bool> SecondaryActionInput { get; private set; } = null!;
+
+        [RequiredMember]
         public IInputAction<bool> SwitchPlaceModeInput { get; private set; } = null!;
+
+        [RequiredMember]
         public IInputAction<bool> SwitchPauseModeInput { get; private set; } = null!;
 
         public PlayerInputHandler(InputActionAsset inputActionAsset)
         {
             this.inputActionAsset = inputActionAsset;
 
-            InputActionMap actionMap = this.inputActionAsset.FindActionMap("Player");
+            InputActionMap actionMap = this.inputActionAsset.FindActionMap("Player", throwIfNotFound: true);
 
-            InputActionFactory.Create<bool>(actionMap, "PrimaryAction");
-            InputActionFactory.Create<bool>(actionMap, "SecondaryAction");
-            InputActionFactory.Create<bool>(actionMap, "SwitchPlaceMode");
-            InputActionFactory.Create<bool>(actionMap, "SwitchPauseMode");
+            MoveInput = InputActionFactory.Create<Vector2>(actionMap, "Move");
+            PrimaryActionInput = InputActionFactory.Create<bool>(actionMap, "PrimaryAction");
+            SecondaryActionInput = InputActionFactory.Create<bool>(actionMap, "SecondaryAction");
+            SwitchPlaceModeInput = InputActionFactory.Create<bool>(actionMap, "SwitchPlaceMode");
+            SwitchPauseModeInput = InputActionFactory.Create<bool>(actionMap, "SwitchPauseMode");
+
+            MemberValidator.ValidateInstance(this);
         }
 
         public void Dispose()

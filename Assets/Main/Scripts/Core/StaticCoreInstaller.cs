@@ -31,7 +31,7 @@ namespace Core
                      .AsSingle();
 
             var pointerHandler = new PointerHandler(inputActions);
-            Container.BindInstance(pointerHandler)
+            Container.BindInstance<IPointerHandler>(pointerHandler)
                      .AsSingle();
         }
 

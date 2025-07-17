@@ -7,6 +7,7 @@ using Zenject;
 #nullable enable
 namespace Core
 {
+    [InitFirst]
     public sealed partial class GameStateMachine : MonoXInitable, IStateMachine<IGameMode>
     {
         private StateMachine<IGameMode> sm = null!;

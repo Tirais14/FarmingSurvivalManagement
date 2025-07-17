@@ -30,7 +30,7 @@ namespace Core.InputSystem
             input = inputAction;
 
             input.performed += SetValue;
-            input.performed += OnPerformed;
+            input.performed += OnPerformedEvent;
             input.performed += PerformedValueEvent;
         }
 
@@ -55,7 +55,7 @@ namespace Core.InputSystem
                 if (disposing)
                 {
                     input.performed -= SetValue;
-                    input.performed -= OnPerformed;
+                    input.performed -= OnPerformedEvent;
                     input.performed -= PerformedValueEvent;
                 }
 
@@ -70,6 +70,11 @@ namespace Core.InputSystem
         private void SetValue(CallbackContext context)
         {
             value = ReadValue(context);
+        }
+
+        private void OnPerformedEvent(CallbackContext context)
+        {
+            OnPerformed?.Invoke(context);
         }
 
         private void PerformedValueEvent(CallbackContext context)
