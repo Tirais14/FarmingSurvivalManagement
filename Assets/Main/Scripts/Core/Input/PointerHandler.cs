@@ -7,21 +7,23 @@ using UTIRLib.InputSystem;
 namespace Core.InputSystem
 {
     [InitFirst]
-    public class PointerHandler : MonoXInitable, IPointerHandler
+    public class PointerHandler : IPointerHandler
     {
-        private InputAction pointer = null!;
+        private readonly InputActionAsset inputActionAsset = null!;
 
-        [SerializeField]
-        private InputActionAsset inputs = null!;
-
-        public Vector2 PointerPosition => pointer.ReadValue<Vector2>();
+        public IInputAction<Vector2> PointerInput { get; private set; }
+        public Vector2 PointerPosition => PointerInput.Value;
         public Vector2 WorldPointerPosition {
-            get => Camera.main.ScreenToWorldPoint(pointer.ReadValue<Vector2>());
+            get => Camera.main.ScreenToWorldPoint(PointerPosition);
         }
 
-        protected override void OnInit()
+        public PointerHandler(InputActionAsset inputActionAsset)
         {
-            pointer = inputs.FindActionMap("UI").FindAction("Point");
+            this.inputActionAsset = inputActionAsset;
+
+            PointerInput = InputActionFactory.Create<Vector2>(inputActionAsset,
+                                                              "UI",
+                                                              "Point");
         }
     }
 }

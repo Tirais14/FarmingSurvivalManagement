@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 using UTIRLib.InputSystem;
 using UTIRLib.Zenject;
 using Zenject;
+using UTIRLib.Diagnostics;
+using UTIRLib;
 
 #nullable enable
 namespace Core
@@ -12,25 +14,24 @@ namespace Core
     {
         public override void InstallBindings()
         {
-            BindPlayerInputHandler();
-
-            BindPointerHandler();
+            BindInputHandlers();
 
             BindPlayer();
         }
 
-        private void BindPlayerInputHandler()
+        private void BindInputHandlers()
         {
             var inputActions = Resources.Load<InputActionAsset>("Input Actions");
-            var inputHandler = new PlayerInputHandler(inputActions);
 
-            Container.BindInstance(inputHandler)
+            if (inputActions == null)
+                throw new AssetFailedLoadException("Input Actions");
+
+            var playerInputHandler = new PlayerInputHandler(inputActions);
+            Container.BindInstance(playerInputHandler)
                      .AsSingle();
-        }
 
-        private void BindPointerHandler()
-        {
-            Container.BindFromScene<PointerHandler, IPointerHandler>(FindObjectsInactive.Include)
+            var pointerHandler = new PointerHandler(inputActions);
+            Container.BindInstance(pointerHandler)
                      .AsSingle();
         }
 
