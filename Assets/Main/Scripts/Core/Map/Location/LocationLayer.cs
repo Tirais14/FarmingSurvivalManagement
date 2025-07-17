@@ -16,12 +16,12 @@ namespace Core.Map
     {
         private Map<ILocationCell> cellMap = null!;
 
-        [GetSelfAttribute]
+        [GetSelf]
         private Tilemap tilemap = null!;
 
         public BoundsInt Bounds => Parent.Bounds;
 
-        [GetByParentAttribute]
+        [GetByParent]
         public ILocation Parent { get; private set; } = null!;
 
         public event Action<SyncTile[]>? OnTileChanged;
