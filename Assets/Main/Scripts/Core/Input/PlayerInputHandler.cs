@@ -3,12 +3,16 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UTIRLib.Attributes;
+using UTIRLib.Disposables;
+using UTIRLib.InputSystem;
 using UTIRLib.Utils;
 
 namespace Core.InputSystem
 {
-    public class PlayerInputHandler : IDisposable
+    public sealed class PlayerInputHandler : IDisposableContainer
     {
+        private readonly DisposableCollection disposables = new();
+
         private readonly InputActionAsset inputActionAsset;
         private bool disposedValue;
 
@@ -33,38 +37,36 @@ namespace Core.InputSystem
 
             InputActionMap actionMap = this.inputActionAsset.FindActionMap("Player", throwIfNotFound: true);
 
-            MoveInput = InputActionFactory.Create<Vector2>(actionMap, "Move");
-            PrimaryActionInput = InputActionFactory.Create<bool>(actionMap, "PrimaryAction");
-            SecondaryActionInput = InputActionFactory.Create<bool>(actionMap, "SecondaryAction");
-            SwitchPlaceModeInput = InputActionFactory.Create<bool>(actionMap, "SwitchPlaceMode");
-            SwitchPauseModeInput = InputActionFactory.Create<bool>(actionMap, "SwitchPauseMode");
+            MoveInput = InputActionFactory.Create<Vector2>(actionMap,
+                "Move")
+                .AddTo(this);
+
+            PrimaryActionInput = InputActionFactory.Create<bool>(actionMap,
+                "PrimaryAction")
+                .AddTo(this);
+
+            SecondaryActionInput = InputActionFactory.Create<bool>(actionMap,
+                "SecondaryAction")
+                .AddTo(this);
+
+            SwitchPlaceModeInput = InputActionFactory.Create<bool>(actionMap,
+                "SwitchPlaceMode")
+                .AddTo(this);
+
+            SwitchPauseModeInput = InputActionFactory.Create<bool>(actionMap,
+                "SwitchPauseMode")
+                .AddTo(this);
+
+            disposables.TrimExcess();
 
             MemberValidator.ValidateInstance(this);
         }
 
         public void Dispose()
         {
-            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-            Dispose(disposing: true);
+            disposables.Dispose();
+
             GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposedValue)
-            {
-                if (disposing)
-                {
-                    PrimaryActionInput.Dispose();
-                    SecondaryActionInput.Dispose();
-                    SwitchPlaceModeInput.Dispose();
-                    SwitchPauseModeInput.Dispose();
-                }
-
-                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-                // TODO: set large fields to null
-                disposedValue = true;
-            }
         }
     }
 }

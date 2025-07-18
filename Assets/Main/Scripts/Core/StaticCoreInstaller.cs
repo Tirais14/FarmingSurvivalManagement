@@ -1,11 +1,10 @@
 using Core.InputSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UTIRLib;
 using UTIRLib.InputSystem;
 using UTIRLib.Zenject;
 using Zenject;
-using UTIRLib.Diagnostics;
-using UTIRLib;
 
 #nullable enable
 namespace Core
@@ -30,8 +29,11 @@ namespace Core
             Container.BindInstance(playerInputHandler)
                      .AsSingle();
 
-            var pointerHandler = new PointerHandler(inputActions);
-            Container.BindInstance<IPointerHandler>(pointerHandler)
+            var pointer = new PointerInput(inputActions.FindActionMap("UI",
+                throwIfNotFound: true)
+                .FindAction("Point", throwIfNotFound: true));
+
+            Container.BindInstance<IPointerInput>(pointer)
                      .AsSingle();
         }
 
